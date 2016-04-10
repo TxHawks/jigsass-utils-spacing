@@ -36,7 +36,7 @@ typographic rhythm units as defined in
 or a length specified in pixels.
 
 JigSass Spacing supports negative margins, using `min-<number>` modifiers 
-(e.g., `h-mt--min-4`).
+(e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
 
 #### Installation
 

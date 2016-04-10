@@ -73,7 +73,7 @@ typographic rhythm units as defined in
 or a length specified in pixels.
 
 JigSass Spacing supports negative margins, using `min-<number>` modifiers
-(e.g., `h-mt--min-4`).
+(e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
 
 #### Installation
 
@@ -211,24 +211,24 @@ $_jigsass-spacing-directions: (
 /// @type Map
 /// ---
 $_jigsass-spacing-translation: (
-  u-m: margin,
-  u-mt: top margin,
-  u-me: margin on the horizontal end,
-  u-mb: bottom margin,
-  u-ms: margin on the horizontal start,
-  u-mh: horizontal (left and right) margins,
-  u-mv: vertical (tiop and bottom) margins,
-  u-mr: right margin,
-  u-ml: left margin,
-  u-p: padding,
-  u-pt: top padding,
-  u-pe: padding on the horizontal end,
-  u-pb: bottom padding,
-  u-ps: padding on the horizontal start,
-  u-ph: horizontal (left and right) padding,
-  u-pv: vertical (tiop and bottom) padding,
-  u-pr: right padding,
-  u-pl: left padding,
+  u-m: 'margin on all sides',
+  u-mt: 'top margin',
+  u-me: 'margin on the horizontal end',
+  u-mb: 'bottom margin',
+  u-ms: 'margin on the horizontal start',
+  u-mh: 'horizontal (left and right) margins',
+  u-mv: 'vertical (top and bottom) margins',
+  u-mr: 'right margin',
+  u-ml: 'left margin',
+  u-p: 'padding',
+  u-pt: 'top padding',
+  u-pe: 'padding on the horizontal end',
+  u-pb: 'bottom padding',
+  u-ps: 'padding on the horizontal start',
+  u-ph: 'horizontal (left and right) padding',
+  u-pv: 'vertical (tiop and bottom) padding',
+  u-pr: 'right padding',
+  u-pl: 'left padding',
 );
 
 
@@ -253,6 +253,7 @@ $_jigsass-util-spacing-i: 100;
         'spacing length as a modifier.';
     }
 
+    $_auto: $jigsass-util-modifier == auto;
     $_neg: type-of($jigsass-util-modifier) != number and
       str-index($jigsass-util-modifier, min-) == 1;
     $_modifier: if(
@@ -262,8 +263,8 @@ $_jigsass-util-spacing-i: 100;
     );
 
     @if(
-      type-of($_modifier) != number or
-      not index(px '', unit($_modifier))
+      not $_auto and
+      (type-of($_modifier) != number or not index(px '', unit($_modifier)))
     ) {
       @error 'jigsass-utils-spacing: A length modifier must be a unitless number' +
         'or a length in pixels. \a' +
@@ -273,7 +274,7 @@ $_jigsass-util-spacing-i: 100;
     // When length is in rhythm units
     $props: map-get($_jigsass-spacing-directions, $jigsass-util-name);
     @each $property in $props {
-      @if (unitless($_modifier)) {
+      @if (not $_auto and unitless($_modifier)) {
         @if (str-slice($property, -5) == start) {
           @include jigsass-bidi(
             $property,
@@ -324,7 +325,7 @@ $_jigsass-util-spacing-i: 100;
         }
       }
 
-      // When length is in pixels
+      // When modifier is auto or length is in pixels
       @else {
         @if (str-slice($property, -5) == start) {
           @include jigsass-bidi($property, $_modifier, $rem: false);
@@ -378,11 +379,11 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  #{$jigsass-util-name}--#{$jigsass-util-modifier}'>
-    This element has a #{
+    This element has #{
       if(
-        unit($_modifier) == px,
-        $_modifier pixels,
-        $_modifier rhythm units
+        $_auto,
+        auto,
+        if(unit($_modifier) == px, a $_modifier pixels, a $_modifier rhythm units)
       )
     } #{map-get($_jigsass-spacing-translation, $jigsass-util-name)}.
   </div>

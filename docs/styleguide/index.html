@@ -436,7 +436,7 @@ typographic rhythm units as defined in
 <a href="https://txhawks.github.io/jigsass-tools-typography/#variable-jigsass-sizes">$jigsass-sizes</a>
 or a length specified in pixels.</p>
 <p>JigSass Spacing supports negative margins, using <code>min-&lt;number&gt;</code> modifiers
-(e.g., <code>h-mt--min-4</code>).</p>
+(e.g., <code>h-mt--min-4</code>), as well as auto margins (e.g., <code>h-m--auto</code>).</p>
 <h4 id="installation">Installation</h4>
 <p>Using npm:</p>
 <pre><code class="lang-sh">npm i -S jigsass-utils-spacing
@@ -502,7 +502,7 @@ class under these  conditions.</p>
 		<section id="u-m--1">
 			<h3>u-m--1</h3>
 			<div>
-				<p>A utility class to set the margin of
+				<p>A utility class to set the margin on all sides of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 1 [, $from, $until, $misc]);
@@ -510,7 +510,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-m--1&#39;&gt;
-    This element has a 1 rhythm units margin.
+    This element has a 1 rhythm units margin on all sides.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -522,7 +522,7 @@ an element.</p>
 		<section id="u-m--2">
 			<h3>u-m--2</h3>
 			<div>
-				<p>A utility class to set the margin of
+				<p>A utility class to set the margin on all sides of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 2 [, $from, $until, $misc]);
@@ -530,7 +530,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-m--2&#39;&gt;
-    This element has a 2 rhythm units margin.
+    This element has a 2 rhythm units margin on all sides.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -542,7 +542,7 @@ an element.</p>
 		<section id="u-m--3">
 			<h3>u-m--3</h3>
 			<div>
-				<p>A utility class to set the margin of
+				<p>A utility class to set the margin on all sides of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 3 [, $from, $until, $misc]);
@@ -550,7 +550,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-m--3&#39;&gt;
-    This element has a 3 rhythm units margin.
+    This element has a 3 rhythm units margin on all sides.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -562,7 +562,7 @@ an element.</p>
 		<section id="u-m--4">
 			<h3>u-m--4</h3>
 			<div>
-				<p>A utility class to set the margin of
+				<p>A utility class to set the margin on all sides of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 4 [, $from, $until, $misc]);
@@ -570,7 +570,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-m--4&#39;&gt;
-    This element has a 4 rhythm units margin.
+    This element has a 4 rhythm units margin on all sides.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -902,7 +902,7 @@ an element.</p>
 		<section id="u-mh--1">
 			<h3>u-mh--1</h3>
 			<div>
-				<p>A utility class to set the horizontal right margins of
+				<p>A utility class to set the horizontal (left and right) margins of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-mh, $modifier: 1 [, $from, $until, $misc]);
@@ -910,7 +910,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-mh--1&#39;&gt;
-    This element has a 1 rhythm units horizontal right margins.
+    This element has a 1 rhythm units horizontal (left and right) margins.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -922,7 +922,7 @@ an element.</p>
 		<section id="u-mh--2">
 			<h3>u-mh--2</h3>
 			<div>
-				<p>A utility class to set the horizontal right margins of
+				<p>A utility class to set the horizontal (left and right) margins of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-mh, $modifier: 2 [, $from, $until, $misc]);
@@ -930,7 +930,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-mh--2&#39;&gt;
-    This element has a 2 rhythm units horizontal right margins.
+    This element has a 2 rhythm units horizontal (left and right) margins.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -942,7 +942,7 @@ an element.</p>
 		<section id="u-mh--3">
 			<h3>u-mh--3</h3>
 			<div>
-				<p>A utility class to set the horizontal right margins of
+				<p>A utility class to set the horizontal (left and right) margins of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-mh, $modifier: 3 [, $from, $until, $misc]);
@@ -950,7 +950,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-mh--3&#39;&gt;
-    This element has a 3 rhythm units horizontal right margins.
+    This element has a 3 rhythm units horizontal (left and right) margins.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -962,7 +962,7 @@ an element.</p>
 		<section id="u-mh--4">
 			<h3>u-mh--4</h3>
 			<div>
-				<p>A utility class to set the horizontal right margins of
+				<p>A utility class to set the horizontal (left and right) margins of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-mh, $modifier: 4 [, $from, $until, $misc]);
@@ -970,7 +970,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-mh--4&#39;&gt;
-    This element has a 4 rhythm units horizontal right margins.
+    This element has a 4 rhythm units horizontal (left and right) margins.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -982,7 +982,7 @@ an element.</p>
 		<section id="u-mv--1">
 			<h3>u-mv--1</h3>
 			<div>
-				<p>A utility class to set the vertical bottom margins of
+				<p>A utility class to set the vertical (top and bottom) margins of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-mv, $modifier: 1 [, $from, $until, $misc]);
@@ -990,7 +990,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-mv--1&#39;&gt;
-    This element has a 1 rhythm units vertical bottom margins.
+    This element has a 1 rhythm units vertical (top and bottom) margins.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1002,7 +1002,7 @@ an element.</p>
 		<section id="u-mv--2">
 			<h3>u-mv--2</h3>
 			<div>
-				<p>A utility class to set the vertical bottom margins of
+				<p>A utility class to set the vertical (top and bottom) margins of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-mv, $modifier: 2 [, $from, $until, $misc]);
@@ -1010,7 +1010,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-mv--2&#39;&gt;
-    This element has a 2 rhythm units vertical bottom margins.
+    This element has a 2 rhythm units vertical (top and bottom) margins.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1022,7 +1022,7 @@ an element.</p>
 		<section id="u-mv--3">
 			<h3>u-mv--3</h3>
 			<div>
-				<p>A utility class to set the vertical bottom margins of
+				<p>A utility class to set the vertical (top and bottom) margins of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-mv, $modifier: 3 [, $from, $until, $misc]);
@@ -1030,7 +1030,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-mv--3&#39;&gt;
-    This element has a 3 rhythm units vertical bottom margins.
+    This element has a 3 rhythm units vertical (top and bottom) margins.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1042,7 +1042,7 @@ an element.</p>
 		<section id="u-mv--4">
 			<h3>u-mv--4</h3>
 			<div>
-				<p>A utility class to set the vertical bottom margins of
+				<p>A utility class to set the vertical (top and bottom) margins of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-mv, $modifier: 4 [, $from, $until, $misc]);
@@ -1050,7 +1050,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-mv--4&#39;&gt;
-    This element has a 4 rhythm units vertical bottom margins.
+    This element has a 4 rhythm units vertical (top and bottom) margins.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1622,7 +1622,7 @@ an element.</p>
 		<section id="u-ph--1">
 			<h3>u-ph--1</h3>
 			<div>
-				<p>A utility class to set the horizontal right padding of
+				<p>A utility class to set the horizontal (left and right) padding of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-ph, $modifier: 1 [, $from, $until, $misc]);
@@ -1630,7 +1630,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-ph--1&#39;&gt;
-    This element has a 1 rhythm units horizontal right padding.
+    This element has a 1 rhythm units horizontal (left and right) padding.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1642,7 +1642,7 @@ an element.</p>
 		<section id="u-ph--2">
 			<h3>u-ph--2</h3>
 			<div>
-				<p>A utility class to set the horizontal right padding of
+				<p>A utility class to set the horizontal (left and right) padding of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-ph, $modifier: 2 [, $from, $until, $misc]);
@@ -1650,7 +1650,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-ph--2&#39;&gt;
-    This element has a 2 rhythm units horizontal right padding.
+    This element has a 2 rhythm units horizontal (left and right) padding.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1662,7 +1662,7 @@ an element.</p>
 		<section id="u-ph--3">
 			<h3>u-ph--3</h3>
 			<div>
-				<p>A utility class to set the horizontal right padding of
+				<p>A utility class to set the horizontal (left and right) padding of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-ph, $modifier: 3 [, $from, $until, $misc]);
@@ -1670,7 +1670,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-ph--3&#39;&gt;
-    This element has a 3 rhythm units horizontal right padding.
+    This element has a 3 rhythm units horizontal (left and right) padding.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1682,7 +1682,7 @@ an element.</p>
 		<section id="u-ph--4">
 			<h3>u-ph--4</h3>
 			<div>
-				<p>A utility class to set the horizontal right padding of
+				<p>A utility class to set the horizontal (left and right) padding of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-ph, $modifier: 4 [, $from, $until, $misc]);
@@ -1690,7 +1690,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-ph--4&#39;&gt;
-    This element has a 4 rhythm units horizontal right padding.
+    This element has a 4 rhythm units horizontal (left and right) padding.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1702,7 +1702,7 @@ an element.</p>
 		<section id="u-pv--1">
 			<h3>u-pv--1</h3>
 			<div>
-				<p>A utility class to set the vertical bottom padding of
+				<p>A utility class to set the vertical (tiop and bottom) padding of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-pv, $modifier: 1 [, $from, $until, $misc]);
@@ -1710,7 +1710,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-pv--1&#39;&gt;
-    This element has a 1 rhythm units vertical bottom padding.
+    This element has a 1 rhythm units vertical (tiop and bottom) padding.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1722,7 +1722,7 @@ an element.</p>
 		<section id="u-pv--2">
 			<h3>u-pv--2</h3>
 			<div>
-				<p>A utility class to set the vertical bottom padding of
+				<p>A utility class to set the vertical (tiop and bottom) padding of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-pv, $modifier: 2 [, $from, $until, $misc]);
@@ -1730,7 +1730,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-pv--2&#39;&gt;
-    This element has a 2 rhythm units vertical bottom padding.
+    This element has a 2 rhythm units vertical (tiop and bottom) padding.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1742,7 +1742,7 @@ an element.</p>
 		<section id="u-pv--3">
 			<h3>u-pv--3</h3>
 			<div>
-				<p>A utility class to set the vertical bottom padding of
+				<p>A utility class to set the vertical (tiop and bottom) padding of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-pv, $modifier: 3 [, $from, $until, $misc]);
@@ -1750,7 +1750,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-pv--3&#39;&gt;
-    This element has a 3 rhythm units vertical bottom padding.
+    This element has a 3 rhythm units vertical (tiop and bottom) padding.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1762,7 +1762,7 @@ an element.</p>
 		<section id="u-pv--4">
 			<h3>u-pv--4</h3>
 			<div>
-				<p>A utility class to set the vertical bottom padding of
+				<p>A utility class to set the vertical (tiop and bottom) padding of
 an element.</p>
 <h4 id="include-with-">Include with:</h4>
 <pre><code class="lang-scss">@include jigsass-util(u-pv, $modifier: 4 [, $from, $until, $misc]);
@@ -1770,7 +1770,7 @@ an element.</p>
 <h4 id="example">Example</h4>
 <pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
   &lt;div class=&#39;fpo  u-pv--4&#39;&gt;
-    This element has a 4 rhythm units vertical bottom padding.
+    This element has a 4 rhythm units vertical (tiop and bottom) padding.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1942,7 +1942,7 @@ an element.</p>
 			</div>
 		</section>
 		
-	<footer>Last modified Sunday, 10 April 2016 22:17</footer>
+	<footer>Last modified Sunday, 10 April 2016 22:54</footer>
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>
