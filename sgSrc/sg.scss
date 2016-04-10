@@ -1,0 +1,86 @@
+// *************************************
+//
+// # jigsass-utils-spacing style guide generator
+// -> It is a best practice for JigSass modules to
+//    not automatically generate css and documentation
+//    on `@import`. Please use this file to enable css
+//    (and comments) generation.
+//
+//    Files in `sgSrc/assets` will be available
+//    for use in the style guide
+//
+// *************************************
+
+
+@charset 'UTF-8';
+
+// --------------------
+// Dependencies
+// --------------------
+@import '../node_modules/jigsass-tools-maps/scss/index';
+@import '../node_modules/jigsass-tools-mq/scss/index';
+@import '../node_modules/jigsass-tools-typography/scss/index';
+@import '../node_modules/jigsass-tools-strings/scss/index';
+@import '../node_modules/jigsass-tools-bidi/scss/index';
+@import '../node_modules/jigsass-tools-selectors/scss/index';
+
+
+
+
+
+// --------------------
+// Styles
+// --------------------
+
+$_spacers: u-m u-mt u-me u-mb u-ms u-mh u-mv u-mr u-ml u-p u-pt u-pe u-pb u-ps u-ph u-pv u-pr u-pl;
+
+
+@each $name in $_spacers {
+  @for $i from 1 through 4 {
+    @include jigsass-util($name, $modifier: $i);
+  }
+}
+
+
+@import 'index.scss';
+
+
+
+// --------------------
+// Demo Styles
+// --------------------
+
+$jigsass-mdcss-brand-color: #09a5d9;
+@include jigsass-set-baseline;
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 !important;
+}
+
+.fpo {
+   background-color: $jigsass-mdcss-brand-color;
+   color: #fff;
+   padding: 1rem;
+}
+.fpo--b {
+  background-color: paleturquoise;
+  overflow: hidden;
+}
+
+figure,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+

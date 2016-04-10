@@ -1,0 +1,391 @@
+// *************************************
+//
+// # jigsass-utils-spacing
+// -> A collection of dynamically generated spacing utility classes
+//
+// Author: TxHawks (tofu.hawks@gmail.com)
+// https://txhawks.github.io/jigsass-utils-spacing
+//
+// *************************************
+
+@charset 'UTF-8';
+
+
+// -------------------------------------
+// Dependencies
+// -------------------------------------
+
+@if (not mixin-exists(jigsass-define-util)) {
+  @error '`jigsass-utils-spacing` has a dependency on `jigsass-tools-selectors`. ' +
+    'Please import it before this file.';
+}
+
+
+
+
+
+// -------------------------------------
+// Introduction
+// -------------------------------------
+
+// stylelint-disable
+/* ---
+section: Spacing Utils
+title: Introduction
+order: -10
+---
+
+[![NPM version][npm-image]][npm-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+
+A collection of dynamically generated spacing utility classes.
+
+Class names follow the [Emmet](http://docs.emmet.io/cheat-sheet/) abbreviation
+syntax, with colons (':') replaced by two dashes (`--`) to follow BEM naming
+conventions.
+
+#### Available classes
+
+  - `.u-m--<amount>`: margin
+  - `.u-mt--<amount>`: margin top
+  - `.u-me--<amount>`: margin end (right in `LTR`, left in `RTL`)
+  - `.u-mb--<amount>`: margin bottom
+  - `.u-ms--<amount>`: margin start (left in `LTR`, right in `RTL`)
+  - `.u-mh--<amount>`: horizontal margins (left and right)
+  - `.u-mv--<amount>`: vertical margins (top and bottom)
+  - `.u-mr--<amount>`: margin right
+  - `.u-ml--<amount>`: margin left
+
+  - `.u-p--<amount>`: padding
+  - `.u-pt--<amount>`: padding top
+  - `.u-pe--<amount>`: padding end (right in `LTR`, left in `RTL`)
+  - `.u-pb--<amount>`: padding bottom
+  - `.u-ps--<amount>`: padding start (left in `LTR`, right in `RTL`)
+  - `.u-ph--<amount>`: horizontal padding
+  - `.u-pv--<amount>`: vertical padding
+  - `.u-pr--<amount>`: padding right
+  - `.u-pl--<amount>`: padding left
+
+
+Where `<amount>` can be either a unitless number representing a number of
+typographic rhythm units as defined in
+[$jigsass-sizes](https://txhawks.github.io/jigsass-tools-typography/#variable-jigsass-sizes)
+or a length specified in pixels.
+
+#### Installation
+
+Using npm:
+
+```sh
+npm i -S jigsass-utils-spacing
+```
+
+#### Usage
+Import JigSass Utils Spacing into your main scss file near its very end, together with all
+other utilities (utilities should always be the last to be imported).
+
+```scss
+@import 'path/to/jigsass-utils-spacing/scss/index';
+```
+
+Like all other JigSass Utils, JigSass Spacing does not automatically generate any CSS
+when imported. You would need to explicitly indicate that each individual spacing
+class should actually be generated in each component or object it is used in
+(clarification: This will include style declarations inside `.foo` and .`bar`):
+
+```scss
+// _c.foo.scss
+.foo {
+  @include jigsass-util(u-mt, $modifier: 6px); // <-- margin-top: 6px
+
+  ...
+}
+```
+
+```scss
+// _c.bar.scss
+.bar {
+  @include jigsass-util(u-pb, $modifier: 12px);  // <-- padding-bottom: 12px
+  @include jigsass-util(u-m, $modifier: 0, $from: large); // <-- margin: 0 from large bp and on.
+
+  ...
+}
+```
+
+Doing so helps us a great deal with portability, as no matter where we import component or object
+partials, the correct utility classes will be generated. Think of it as a poor man's dependency
+management.
+
+Developer communication is also assisted by including "dependencies" wherever they are required,
+as anyone going through a partial, can easily understand how it should be marked up with just a
+glance.
+
+As far as bloat goes, just don't worry about it - the actual styles will only be generated once,
+at the location in the cascade where the Jigsass Spacing partial was imported into the main file.
+
+
+JigSass Spacing classes are responsive-enabled, using [JigSass MQ](https://txhawks.github.io/jigsass-tools-mq/)
+and the breakpoints defined in the [$jigsass-breakpoints](https://txhawks.github.io/jigsass-tools-mq/#variable-jigsass-breakpoints) variable.
+
+Based on the breakpoint arguments passed to `jigsass-util` when including a Spacing class,
+responsive modifiers are generated according to the following logic:
+
+```scss
+.u-m--<modifier>[-[-from-<breakpoint-name>][-until-<breakpoint-name>][-misc-<breakpoint-name>]]
+```
+
+So, assuming the `medium`, `large` and `landscape` breakpoints are defined in `$jigsass-breakpoints`
+as `600px`, `1024px` and `(orientation: landscape)` respectively,
+
+```scss
+@include jigsass-util(u-m, $modifier: 2);
+```
+will generate the `.u-m--2` class, which is not limited to any media-query.
+
+```scss
+@include jigsass-util(u-p, $modifier: 4, $until: medium);
+```
+
+will generate the `.u-p--4--until-medium` class, which will be in effect at
+`(max-width: 37.49em)` and will override styles in the default class until that point.
+
+```scss
+@include jigsass-util(u-mb, $modifier: 12px, $from: large, $misc: landscape);
+```
+
+will generate the `.u-mb--12px--from-large-when-landscape` class, which will go into
+effect at `(min-width: 64em) and (orientation: landscape)` and will override styles in the default
+class under these  conditions.
+
+
+**License:** MIT
+
+
+
+[npm-image]: https://badge.fury.io/js/jigsass-utils-visibility.svg
+[npm-url]: https://npmjs.org/package/jigsass-utils-visibility
+
+[daviddm-image]: https://david-dm.org/TxHawks/jigsass-utils-visibility.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/TxHawks/jigsass-utils-visibility
+*/
+// stylelint-enable
+
+
+
+
+
+// -------------------------------------
+// Variables
+// -------------------------------------
+
+/// A constant used for generating spacing utility classes.
+/// ---
+/// @type Map
+/// ---
+$_jigsass-spacing-directions: (
+  u-m: margin,
+  u-mt: margin-top,
+  u-me: margin-end,
+  u-mb: margin-bottom,
+  u-ms: margin-start,
+  u-mh: margin-left margin-right,
+  u-mv: margin-bottom margin-top,
+  u-mr: margin-right,
+  u-ml: margin-left,
+  u-p: padding,
+  u-pt: padding-top,
+  u-pe: padding-end,
+  u-pb: padding-bottom,
+  u-ps: padding-start,
+  u-ph: padding-left padding-right,
+  u-pv: padding-bottom padding-top,
+  u-pr: padding-right,
+  u-pl: padding-left,
+);
+
+/// A constant used for generating spacing doclets.
+/// ---
+/// @type Map
+/// ---
+$_jigsass-spacing-translation: (
+  u-m: margin,
+  u-mt: top margin,
+  u-me: margin on the horizontal end,
+  u-mb: bottom margin,
+  u-ms: margin on the horizontal start,
+  u-mh: horizontal (left and right) margins,
+  u-mv: vertical (tiop and bottom) margins,
+  u-mr: right margin,
+  u-ml: left margin,
+  u-p: padding,
+  u-pt: top padding,
+  u-pe: padding on the horizontal end,
+  u-pb: bottom padding,
+  u-ps: padding on the horizontal start,
+  u-ph: horizontal (left and right) padding,
+  u-pv: vertical (tiop and bottom) padding,
+  u-pr: right padding,
+  u-pl: left padding,
+);
+
+
+// Used internally to store doclets
+$_doclet-store: () !default;
+
+// Used internally to ordering doclets
+$_jigsass-util-spacing-i: 100;
+
+
+
+// -------------------------------------
+// Definitions
+// -------------------------------------
+
+@each $direction, $properties in $_jigsass-spacing-directions {
+  @include jigsass-define-util($direction) {
+    @if(not $jigsass-util-modifier) {
+      @error 'jigsass-utils-spacing: #{$jigsass-util-name} must be passed A ' +
+        'spacing length as a modifier.';
+    }
+    @if(
+      type-of($jigsass-util-modifier) != number or
+      not index(px '', unit($jigsass-util-modifier))
+    ) {
+      @error 'jigsass-utils-spacing: A length modifier must be a unitless number' +
+        'or a length in pixels. \a' +
+        'You are trying to pass the #{type-of($jigsass-util-modifier)} #{$jigsass-util-modifier}.';
+    }
+
+    // When length is in rhythm units
+    $props: map-get($_jigsass-spacing-directions, $jigsass-util-name);
+    @each $property in $props {
+      @if (unitless($jigsass-util-modifier)) {
+        @if (str-slice($property, -5) == start) {
+          @include jigsass-bidi(
+            $property,
+            jigsass-rhythm($jigsass-util-modifier, $unit: rem),
+            $rem: true
+          );
+
+          [dir=ltr] & {
+            @include jigsass-rem(
+              #{str-slice($property, 1, -7)}-left,
+              jigsass-rhythm($jigsass-util-modifier, $unit: rem)
+            );
+          }
+
+          [dir=rtl] & {
+            @include jigsass-rem(
+              #{str-slice($property, 1, -7)}-right,
+              jigsass-rhythm($jigsass-util-modifier, $unit: rem)
+            );
+          }
+        }
+        @else if (str-slice($property, -3) == end) {
+          @include jigsass-bidi(
+            $property,
+            jigsass-rhythm($jigsass-util-modifier, $unit: rem),
+            $rem: true
+          );
+
+          [dir=ltr] & {
+            @include jigsass-rem(
+              #{str-slice($property, 1, -5)}-left,
+              jigsass-rhythm($jigsass-util-modifier, $unit: rem)
+            );
+          }
+
+          [dir=rtl] & {
+            @include jigsass-rem(
+              #{str-slice($property, 1, -5)}-right,
+              jigsass-rhythm($jigsass-util-modifier, $unit: rem)
+            );
+          }
+        }
+        @else {
+          @include jigsass-rem(
+            $property,
+            jigsass-rhythm($jigsass-util-modifier, $unit: rem)
+          );
+        }
+      }
+
+      // When length is in pixels
+      @else {
+        @if (str-slice($property, -5) == start) {
+          @include jigsass-bidi(
+            $property,
+            $jigsass-util-modifier,
+            $rem: false
+          );
+
+          [dir=ltr] & {
+            #{str-slice($property, 1, -7)}-left: $jigsass-util-modifier;
+          }
+
+          [dir=rtl] & {
+            #{str-slice($property, 1, -7)}-right: $jigsass-util-modifier;
+          }
+        }
+        @else if (str-slice($property, -3) == end) {
+          @include jigsass-bidi(
+            $property,
+            $jigsass-util-modifier,
+            $rem: false
+          );
+
+          [dir=ltr] & {
+            #{str-slice($property, 1, -5)}-left: $jigsass-util-modifier;
+          }
+
+          [dir=rtl] & {
+            #{str-slice($property, 1, -5)}-right: $jigsass-util-modifier;
+          }
+        }
+        @else {
+          #{$property}: $jigsass-util-modifier;
+        }
+      }
+    }
+
+
+    $_doclet: $jigsass-util-name + ($jigsass-util-modifier or '');
+    $_type: str-slice(nth($props, 1), 1, ((str-index(nth($props, 1), '-') or 0) - 1));
+    @if (not index($_doclet-store, $_doclet)) {
+      $_doclet-store: append($_doclet-store, $_doclet) !global;
+      // stylelint-disable
+/* ---
+section: Spacing Utils
+title: #{$jigsass-util-name}--#{$jigsass-util-modifier}
+order: #{$_jigsass-util-spacing-i}
+---
+A utility class to set the #{map-get($_jigsass-spacing-translation, $jigsass-util-name)} of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(#{$jigsass-util-name}, $modifier: #{$jigsass-util-modifier} [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  #{$jigsass-util-name}--#{$jigsass-util-modifier}'>
+    This element has a #{
+      if(
+        unit($jigsass-util-modifier) == px,
+        $jigsass-util-modifier pixels,
+        $jigsass-util-modifier rhythm units
+      )
+    } #{map-get($_jigsass-spacing-translation, $jigsass-util-name)}.
+  </div>
+</div>
+```
+*/
+      // stylelint-enable
+      $_jigsass-util-spacing-i: $_jigsass-util-spacing-i + 1 !global;
+    }
+  }
+}

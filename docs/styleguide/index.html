@@ -1,0 +1,1948 @@
+<!doctype html>
+<title>jigsass-utils-spacing</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css?05" rel="stylesheet">
+<link href="jigsass-logo.png" rel="shortcut icon">
+<script type="text/javascript">WebFontConfig={google:{families:["Roboto:400,100,300,500:latin"]}},function(){var e=document.createElement("script");e.src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",e.type="text/javascript",e.async="true";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script>
+<script>examples={"base":"","target":"_self","css":["assets/sg.css"],"js":[],"bodyjs":[],"htmlcss":"background:none;border:0;clip:auto;display:block;height:auto;margin:0;padding:0;position:static;width:auto","bodycss":"background:none;border:0;clip:auto;display:block;height:auto;margin:0;padding:0;position:static;width:auto"};</script>
+
+<header>
+	<nav>
+		<img src="jigsass-logo.png" alt="jigsass-utils-spacing">
+		
+	<ul>
+		
+				<li>
+					<a href="#spacing-utils"><span>Spacing Utils</span></a>
+					
+	<ul>
+		
+				<li>
+					<a href="#introduction"><span>Introduction</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-m--1"><span>u-m--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-m--2"><span>u-m--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-m--3"><span>u-m--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-m--4"><span>u-m--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mt--1"><span>u-mt--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mt--2"><span>u-mt--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mt--3"><span>u-mt--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mt--4"><span>u-mt--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-me--1"><span>u-me--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-me--2"><span>u-me--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-me--3"><span>u-me--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-me--4"><span>u-me--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mb--1"><span>u-mb--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mb--2"><span>u-mb--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mb--3"><span>u-mb--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mb--4"><span>u-mb--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ms--1"><span>u-ms--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ms--2"><span>u-ms--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ms--3"><span>u-ms--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ms--4"><span>u-ms--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mh--1"><span>u-mh--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mh--2"><span>u-mh--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mh--3"><span>u-mh--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mh--4"><span>u-mh--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mv--1"><span>u-mv--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mv--2"><span>u-mv--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mv--3"><span>u-mv--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mv--4"><span>u-mv--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mr--1"><span>u-mr--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mr--2"><span>u-mr--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mr--3"><span>u-mr--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-mr--4"><span>u-mr--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ml--1"><span>u-ml--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ml--2"><span>u-ml--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ml--3"><span>u-ml--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ml--4"><span>u-ml--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-p--1"><span>u-p--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-p--2"><span>u-p--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-p--3"><span>u-p--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-p--4"><span>u-p--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pt--1"><span>u-pt--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pt--2"><span>u-pt--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pt--3"><span>u-pt--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pt--4"><span>u-pt--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pe--1"><span>u-pe--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pe--2"><span>u-pe--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pe--3"><span>u-pe--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pe--4"><span>u-pe--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pb--1"><span>u-pb--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pb--2"><span>u-pb--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pb--3"><span>u-pb--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pb--4"><span>u-pb--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ps--1"><span>u-ps--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ps--2"><span>u-ps--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ps--3"><span>u-ps--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ps--4"><span>u-ps--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ph--1"><span>u-ph--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ph--2"><span>u-ph--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ph--3"><span>u-ph--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-ph--4"><span>u-ph--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pv--1"><span>u-pv--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pv--2"><span>u-pv--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pv--3"><span>u-pv--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pv--4"><span>u-pv--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pr--1"><span>u-pr--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pr--2"><span>u-pr--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pr--3"><span>u-pr--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pr--4"><span>u-pr--4</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pl--1"><span>u-pl--1</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pl--2"><span>u-pl--2</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pl--3"><span>u-pl--3</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#u-pl--4"><span>u-pl--4</span></a>
+					
+				</li>
+				
+	</ul>
+	
+				</li>
+				
+	</ul>
+	
+	</nav>
+</header>
+
+<main>
+	
+		<section id="spacing-utils">
+			<h2>Spacing Utils</h2>
+			<div>
+				
+				
+		<section id="introduction">
+			<h3>Introduction</h3>
+			<div>
+				<p><a href="https://npmjs.org/package/jigsass-utils-visibility"><img src="https://badge.fury.io/js/jigsass-utils-visibility.svg" alt="NPM version"></a>
+<a href="https://david-dm.org/TxHawks/jigsass-utils-visibility"><img src="https://david-dm.org/TxHawks/jigsass-utils-visibility.svg?theme=shields.io" alt="Dependency Status"></a></p>
+<p>A collection of dynamically generated spacing utility classes.</p>
+<p>Class names follow the <a href="http://docs.emmet.io/cheat-sheet/">Emmet</a> abbreviation
+syntax, with colons (&#39;:&#39;) replaced by two dashes (<code>--</code>) to follow BEM naming
+conventions.</p>
+<h4 id="available-classes">Available classes</h4>
+<ul>
+<li><code>.u-m--&lt;amount&gt;</code>: margin</li>
+<li><code>.u-mt--&lt;amount&gt;</code>: margin top</li>
+<li><code>.u-me--&lt;amount&gt;</code>: margin end (right in <code>LTR</code>, left in <code>RTL</code>)</li>
+<li><code>.u-mb--&lt;amount&gt;</code>: margin bottom</li>
+<li><code>.u-ms--&lt;amount&gt;</code>: margin start (left in <code>LTR</code>, right in <code>RTL</code>)</li>
+<li><code>.u-mh--&lt;amount&gt;</code>: horizontal margins (left and right)</li>
+<li><code>.u-mv--&lt;amount&gt;</code>: vertical margins (top and bottom)</li>
+<li><code>.u-mr--&lt;amount&gt;</code>: margin right</li>
+<li><p><code>.u-ml--&lt;amount&gt;</code>: margin left</p>
+</li>
+<li><p><code>.u-p--&lt;amount&gt;</code>: padding</p>
+</li>
+<li><code>.u-pt--&lt;amount&gt;</code>: padding top</li>
+<li><code>.u-pe--&lt;amount&gt;</code>: padding end (right in <code>LTR</code>, left in <code>RTL</code>)</li>
+<li><code>.u-pb--&lt;amount&gt;</code>: padding bottom</li>
+<li><code>.u-ps--&lt;amount&gt;</code>: padding start (left in <code>LTR</code>, right in <code>RTL</code>)</li>
+<li><code>.u-ph--&lt;amount&gt;</code>: horizontal padding</li>
+<li><code>.u-pv--&lt;amount&gt;</code>: vertical padding</li>
+<li><code>.u-pr--&lt;amount&gt;</code>: padding right</li>
+<li><code>.u-pl--&lt;amount&gt;</code>: padding left</li>
+</ul>
+<p>Where <code>&lt;amount&gt;</code> can be either a unitless number representing a number of
+typographic rhythm units as defined in
+<a href="https://txhawks.github.io/jigsass-tools-typography/#variable-jigsass-sizes">$jigsass-sizes</a>
+or a length specified in pixels.</p>
+<h4 id="installation">Installation</h4>
+<p>Using npm:</p>
+<pre><code class="lang-sh">npm i -S jigsass-utils-spacing
+</code></pre>
+<h4 id="usage">Usage</h4>
+<p>Import JigSass Utils Spacing into your main scss file near its very end, together with all
+other utilities (utilities should always be the last to be imported).</p>
+<pre><code class="lang-scss">@import &#39;path/to/jigsass-utils-spacing/scss/index&#39;;
+</code></pre>
+<p>Like all other JigSass Utils, JigSass Spacing does not automatically generate any CSS
+when imported. You would need to explicitly indicate that each individual spacing
+class should actually be generated in each component or object it is used in
+(clarification: This will include style declarations inside <code>.foo</code> and .<code>bar</code>):</p>
+<pre><code class="lang-scss">// _c.foo.scss
+.foo {
+  @include jigsass-util(u-mt, $modifier: 6px); // &lt;-- margin-top: 6px
+
+  ...
+}
+</code></pre>
+<pre><code class="lang-scss">// _c.bar.scss
+.bar {
+  @include jigsass-util(u-pb, $modifier: 12px);  // &lt;-- padding-bottom: 12px
+  @include jigsass-util(u-m, $modifier: 0, $from: large); // &lt;-- margin: 0 from large bp and on.
+
+  ...
+}
+</code></pre>
+<p>Doing so helps us a great deal with portability, as no matter where we import component or object
+partials, the correct utility classes will be generated. Think of it as a poor man&#39;s dependency
+management.</p>
+<p>Developer communication is also assisted by including &quot;dependencies&quot; wherever they are required,
+as anyone going through a partial, can easily understand how it should be marked up with just a
+glance.</p>
+<p>As far as bloat goes, just don&#39;t worry about it - the actual styles will only be generated once,
+at the location in the cascade where the Jigsass Spacing partial was imported into the main file.</p>
+<p>JigSass Spacing classes are responsive-enabled, using <a href="https://txhawks.github.io/jigsass-tools-mq/">JigSass MQ</a>
+and the breakpoints defined in the <a href="https://txhawks.github.io/jigsass-tools-mq/#variable-jigsass-breakpoints">$jigsass-breakpoints</a> variable.</p>
+<p>Based on the breakpoint arguments passed to <code>jigsass-util</code> when including a Spacing class,
+responsive modifiers are generated according to the following logic:</p>
+<pre><code class="lang-scss">.u-m--&lt;modifier&gt;[-[-from-&lt;breakpoint-name&gt;][-until-&lt;breakpoint-name&gt;][-misc-&lt;breakpoint-name&gt;]]
+</code></pre>
+<p>So, assuming the <code>medium</code>, <code>large</code> and <code>landscape</code> breakpoints are defined in <code>$jigsass-breakpoints</code>
+as <code>600px</code>, <code>1024px</code> and <code>(orientation: landscape)</code> respectively,</p>
+<pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 2);
+</code></pre>
+<p>will generate the <code>.u-m--2</code> class, which is not limited to any media-query.</p>
+<pre><code class="lang-scss">@include jigsass-util(u-p, $modifier: 4, $until: medium);
+</code></pre>
+<p>will generate the <code>.u-p--4--until-medium</code> class, which will be in effect at
+<code>(max-width: 37.49em)</code> and will override styles in the default class until that point.</p>
+<pre><code class="lang-scss">@include jigsass-util(u-mb, $modifier: 12px, $from: large, $misc: landscape);
+</code></pre>
+<p>will generate the <code>.u-mb--12px--from-large-when-landscape</code> class, which will go into
+effect at <code>(min-width: 64em) and (orientation: landscape)</code> and will override styles in the default
+class under these  conditions.</p>
+<p><strong>License:</strong> MIT</p>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-m--1">
+			<h3>u-m--1</h3>
+			<div>
+				<p>A utility class to set the margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-m--1&#39;&gt;
+    This element has a 1 rhythm units margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-m--2">
+			<h3>u-m--2</h3>
+			<div>
+				<p>A utility class to set the margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-m--2&#39;&gt;
+    This element has a 2 rhythm units margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-m--3">
+			<h3>u-m--3</h3>
+			<div>
+				<p>A utility class to set the margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-m--3&#39;&gt;
+    This element has a 3 rhythm units margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-m--4">
+			<h3>u-m--4</h3>
+			<div>
+				<p>A utility class to set the margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-m, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-m--4&#39;&gt;
+    This element has a 4 rhythm units margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mt--1">
+			<h3>u-mt--1</h3>
+			<div>
+				<p>A utility class to set the top margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mt, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mt--1&#39;&gt;
+    This element has a 1 rhythm units top margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mt--2">
+			<h3>u-mt--2</h3>
+			<div>
+				<p>A utility class to set the top margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mt, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mt--2&#39;&gt;
+    This element has a 2 rhythm units top margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mt--3">
+			<h3>u-mt--3</h3>
+			<div>
+				<p>A utility class to set the top margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mt, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mt--3&#39;&gt;
+    This element has a 3 rhythm units top margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mt--4">
+			<h3>u-mt--4</h3>
+			<div>
+				<p>A utility class to set the top margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mt, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mt--4&#39;&gt;
+    This element has a 4 rhythm units top margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-me--1">
+			<h3>u-me--1</h3>
+			<div>
+				<p>A utility class to set the margin on the horizontal end of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-me, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-me--1&#39;&gt;
+    This element has a 1 rhythm units margin on the horizontal end.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-me--2">
+			<h3>u-me--2</h3>
+			<div>
+				<p>A utility class to set the margin on the horizontal end of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-me, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-me--2&#39;&gt;
+    This element has a 2 rhythm units margin on the horizontal end.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-me--3">
+			<h3>u-me--3</h3>
+			<div>
+				<p>A utility class to set the margin on the horizontal end of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-me, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-me--3&#39;&gt;
+    This element has a 3 rhythm units margin on the horizontal end.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-me--4">
+			<h3>u-me--4</h3>
+			<div>
+				<p>A utility class to set the margin on the horizontal end of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-me, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-me--4&#39;&gt;
+    This element has a 4 rhythm units margin on the horizontal end.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mb--1">
+			<h3>u-mb--1</h3>
+			<div>
+				<p>A utility class to set the bottom margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mb, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mb--1&#39;&gt;
+    This element has a 1 rhythm units bottom margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mb--2">
+			<h3>u-mb--2</h3>
+			<div>
+				<p>A utility class to set the bottom margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mb, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mb--2&#39;&gt;
+    This element has a 2 rhythm units bottom margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mb--3">
+			<h3>u-mb--3</h3>
+			<div>
+				<p>A utility class to set the bottom margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mb, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mb--3&#39;&gt;
+    This element has a 3 rhythm units bottom margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mb--4">
+			<h3>u-mb--4</h3>
+			<div>
+				<p>A utility class to set the bottom margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mb, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mb--4&#39;&gt;
+    This element has a 4 rhythm units bottom margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ms--1">
+			<h3>u-ms--1</h3>
+			<div>
+				<p>A utility class to set the margin on the horizontal start of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ms, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ms--1&#39;&gt;
+    This element has a 1 rhythm units margin on the horizontal start.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ms--2">
+			<h3>u-ms--2</h3>
+			<div>
+				<p>A utility class to set the margin on the horizontal start of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ms, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ms--2&#39;&gt;
+    This element has a 2 rhythm units margin on the horizontal start.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ms--3">
+			<h3>u-ms--3</h3>
+			<div>
+				<p>A utility class to set the margin on the horizontal start of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ms, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ms--3&#39;&gt;
+    This element has a 3 rhythm units margin on the horizontal start.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ms--4">
+			<h3>u-ms--4</h3>
+			<div>
+				<p>A utility class to set the margin on the horizontal start of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ms, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ms--4&#39;&gt;
+    This element has a 4 rhythm units margin on the horizontal start.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mh--1">
+			<h3>u-mh--1</h3>
+			<div>
+				<p>A utility class to set the horizontal right margins of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mh, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mh--1&#39;&gt;
+    This element has a 1 rhythm units horizontal right margins.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mh--2">
+			<h3>u-mh--2</h3>
+			<div>
+				<p>A utility class to set the horizontal right margins of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mh, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mh--2&#39;&gt;
+    This element has a 2 rhythm units horizontal right margins.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mh--3">
+			<h3>u-mh--3</h3>
+			<div>
+				<p>A utility class to set the horizontal right margins of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mh, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mh--3&#39;&gt;
+    This element has a 3 rhythm units horizontal right margins.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mh--4">
+			<h3>u-mh--4</h3>
+			<div>
+				<p>A utility class to set the horizontal right margins of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mh, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mh--4&#39;&gt;
+    This element has a 4 rhythm units horizontal right margins.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mv--1">
+			<h3>u-mv--1</h3>
+			<div>
+				<p>A utility class to set the vertical bottom margins of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mv, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mv--1&#39;&gt;
+    This element has a 1 rhythm units vertical bottom margins.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mv--2">
+			<h3>u-mv--2</h3>
+			<div>
+				<p>A utility class to set the vertical bottom margins of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mv, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mv--2&#39;&gt;
+    This element has a 2 rhythm units vertical bottom margins.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mv--3">
+			<h3>u-mv--3</h3>
+			<div>
+				<p>A utility class to set the vertical bottom margins of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mv, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mv--3&#39;&gt;
+    This element has a 3 rhythm units vertical bottom margins.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mv--4">
+			<h3>u-mv--4</h3>
+			<div>
+				<p>A utility class to set the vertical bottom margins of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mv, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mv--4&#39;&gt;
+    This element has a 4 rhythm units vertical bottom margins.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mr--1">
+			<h3>u-mr--1</h3>
+			<div>
+				<p>A utility class to set the right margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mr, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mr--1&#39;&gt;
+    This element has a 1 rhythm units right margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mr--2">
+			<h3>u-mr--2</h3>
+			<div>
+				<p>A utility class to set the right margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mr, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mr--2&#39;&gt;
+    This element has a 2 rhythm units right margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mr--3">
+			<h3>u-mr--3</h3>
+			<div>
+				<p>A utility class to set the right margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mr, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mr--3&#39;&gt;
+    This element has a 3 rhythm units right margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-mr--4">
+			<h3>u-mr--4</h3>
+			<div>
+				<p>A utility class to set the right margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-mr, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-mr--4&#39;&gt;
+    This element has a 4 rhythm units right margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ml--1">
+			<h3>u-ml--1</h3>
+			<div>
+				<p>A utility class to set the left margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ml, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ml--1&#39;&gt;
+    This element has a 1 rhythm units left margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ml--2">
+			<h3>u-ml--2</h3>
+			<div>
+				<p>A utility class to set the left margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ml, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ml--2&#39;&gt;
+    This element has a 2 rhythm units left margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ml--3">
+			<h3>u-ml--3</h3>
+			<div>
+				<p>A utility class to set the left margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ml, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ml--3&#39;&gt;
+    This element has a 3 rhythm units left margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ml--4">
+			<h3>u-ml--4</h3>
+			<div>
+				<p>A utility class to set the left margin of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ml, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ml--4&#39;&gt;
+    This element has a 4 rhythm units left margin.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-p--1">
+			<h3>u-p--1</h3>
+			<div>
+				<p>A utility class to set the padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-p, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-p--1&#39;&gt;
+    This element has a 1 rhythm units padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-p--2">
+			<h3>u-p--2</h3>
+			<div>
+				<p>A utility class to set the padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-p, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-p--2&#39;&gt;
+    This element has a 2 rhythm units padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-p--3">
+			<h3>u-p--3</h3>
+			<div>
+				<p>A utility class to set the padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-p, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-p--3&#39;&gt;
+    This element has a 3 rhythm units padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-p--4">
+			<h3>u-p--4</h3>
+			<div>
+				<p>A utility class to set the padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-p, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-p--4&#39;&gt;
+    This element has a 4 rhythm units padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pt--1">
+			<h3>u-pt--1</h3>
+			<div>
+				<p>A utility class to set the top padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pt, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pt--1&#39;&gt;
+    This element has a 1 rhythm units top padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pt--2">
+			<h3>u-pt--2</h3>
+			<div>
+				<p>A utility class to set the top padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pt, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pt--2&#39;&gt;
+    This element has a 2 rhythm units top padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pt--3">
+			<h3>u-pt--3</h3>
+			<div>
+				<p>A utility class to set the top padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pt, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pt--3&#39;&gt;
+    This element has a 3 rhythm units top padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pt--4">
+			<h3>u-pt--4</h3>
+			<div>
+				<p>A utility class to set the top padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pt, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pt--4&#39;&gt;
+    This element has a 4 rhythm units top padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pe--1">
+			<h3>u-pe--1</h3>
+			<div>
+				<p>A utility class to set the padding on the horizontal end of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pe, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pe--1&#39;&gt;
+    This element has a 1 rhythm units padding on the horizontal end.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pe--2">
+			<h3>u-pe--2</h3>
+			<div>
+				<p>A utility class to set the padding on the horizontal end of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pe, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pe--2&#39;&gt;
+    This element has a 2 rhythm units padding on the horizontal end.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pe--3">
+			<h3>u-pe--3</h3>
+			<div>
+				<p>A utility class to set the padding on the horizontal end of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pe, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pe--3&#39;&gt;
+    This element has a 3 rhythm units padding on the horizontal end.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pe--4">
+			<h3>u-pe--4</h3>
+			<div>
+				<p>A utility class to set the padding on the horizontal end of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pe, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pe--4&#39;&gt;
+    This element has a 4 rhythm units padding on the horizontal end.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pb--1">
+			<h3>u-pb--1</h3>
+			<div>
+				<p>A utility class to set the bottom padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pb, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pb--1&#39;&gt;
+    This element has a 1 rhythm units bottom padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pb--2">
+			<h3>u-pb--2</h3>
+			<div>
+				<p>A utility class to set the bottom padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pb, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pb--2&#39;&gt;
+    This element has a 2 rhythm units bottom padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pb--3">
+			<h3>u-pb--3</h3>
+			<div>
+				<p>A utility class to set the bottom padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pb, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pb--3&#39;&gt;
+    This element has a 3 rhythm units bottom padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pb--4">
+			<h3>u-pb--4</h3>
+			<div>
+				<p>A utility class to set the bottom padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pb, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pb--4&#39;&gt;
+    This element has a 4 rhythm units bottom padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ps--1">
+			<h3>u-ps--1</h3>
+			<div>
+				<p>A utility class to set the padding on the horizontal start of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ps, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ps--1&#39;&gt;
+    This element has a 1 rhythm units padding on the horizontal start.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ps--2">
+			<h3>u-ps--2</h3>
+			<div>
+				<p>A utility class to set the padding on the horizontal start of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ps, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ps--2&#39;&gt;
+    This element has a 2 rhythm units padding on the horizontal start.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ps--3">
+			<h3>u-ps--3</h3>
+			<div>
+				<p>A utility class to set the padding on the horizontal start of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ps, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ps--3&#39;&gt;
+    This element has a 3 rhythm units padding on the horizontal start.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ps--4">
+			<h3>u-ps--4</h3>
+			<div>
+				<p>A utility class to set the padding on the horizontal start of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ps, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ps--4&#39;&gt;
+    This element has a 4 rhythm units padding on the horizontal start.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ph--1">
+			<h3>u-ph--1</h3>
+			<div>
+				<p>A utility class to set the horizontal right padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ph, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ph--1&#39;&gt;
+    This element has a 1 rhythm units horizontal right padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ph--2">
+			<h3>u-ph--2</h3>
+			<div>
+				<p>A utility class to set the horizontal right padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ph, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ph--2&#39;&gt;
+    This element has a 2 rhythm units horizontal right padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ph--3">
+			<h3>u-ph--3</h3>
+			<div>
+				<p>A utility class to set the horizontal right padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ph, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ph--3&#39;&gt;
+    This element has a 3 rhythm units horizontal right padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-ph--4">
+			<h3>u-ph--4</h3>
+			<div>
+				<p>A utility class to set the horizontal right padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-ph, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-ph--4&#39;&gt;
+    This element has a 4 rhythm units horizontal right padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pv--1">
+			<h3>u-pv--1</h3>
+			<div>
+				<p>A utility class to set the vertical bottom padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pv, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pv--1&#39;&gt;
+    This element has a 1 rhythm units vertical bottom padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pv--2">
+			<h3>u-pv--2</h3>
+			<div>
+				<p>A utility class to set the vertical bottom padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pv, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pv--2&#39;&gt;
+    This element has a 2 rhythm units vertical bottom padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pv--3">
+			<h3>u-pv--3</h3>
+			<div>
+				<p>A utility class to set the vertical bottom padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pv, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pv--3&#39;&gt;
+    This element has a 3 rhythm units vertical bottom padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pv--4">
+			<h3>u-pv--4</h3>
+			<div>
+				<p>A utility class to set the vertical bottom padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pv, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pv--4&#39;&gt;
+    This element has a 4 rhythm units vertical bottom padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pr--1">
+			<h3>u-pr--1</h3>
+			<div>
+				<p>A utility class to set the right padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pr, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pr--1&#39;&gt;
+    This element has a 1 rhythm units right padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pr--2">
+			<h3>u-pr--2</h3>
+			<div>
+				<p>A utility class to set the right padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pr, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pr--2&#39;&gt;
+    This element has a 2 rhythm units right padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pr--3">
+			<h3>u-pr--3</h3>
+			<div>
+				<p>A utility class to set the right padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pr, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pr--3&#39;&gt;
+    This element has a 3 rhythm units right padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pr--4">
+			<h3>u-pr--4</h3>
+			<div>
+				<p>A utility class to set the right padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pr, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pr--4&#39;&gt;
+    This element has a 4 rhythm units right padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pl--1">
+			<h3>u-pl--1</h3>
+			<div>
+				<p>A utility class to set the left padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pl, $modifier: 1 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pl--1&#39;&gt;
+    This element has a 1 rhythm units left padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pl--2">
+			<h3>u-pl--2</h3>
+			<div>
+				<p>A utility class to set the left padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pl, $modifier: 2 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pl--2&#39;&gt;
+    This element has a 2 rhythm units left padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pl--3">
+			<h3>u-pl--3</h3>
+			<div>
+				<p>A utility class to set the left padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pl, $modifier: 3 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pl--3&#39;&gt;
+    This element has a 3 rhythm units left padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="u-pl--4">
+			<h3>u-pl--4</h3>
+			<div>
+				<p>A utility class to set the left padding of
+an element.</p>
+<h4 id="include-with-">Include with:</h4>
+<pre><code class="lang-scss">@include jigsass-util(u-pl, $modifier: 4 [, $from, $until, $misc]);
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b&#39;&gt;
+  &lt;div class=&#39;fpo  u-pl--4&#39;&gt;
+    This element has a 4 rhythm units left padding.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+			</div>
+		</section>
+		
+	<footer>Last modified Sunday, 10 April 2016 18:31</footer>
+</main>
+<script src="prism.js"></script>
+<script src="examples.js"></script>
+<script src="script.js"></script>
+
