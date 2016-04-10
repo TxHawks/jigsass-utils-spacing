@@ -42,7 +42,7 @@ typographic rhythm units as defined in
 or a length specified in pixels.
 
 JigSass Spacing supports negative margins, using `min-<number>` modifiers
-(e.g., `h-mt--min-4`).
+(e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
 
 #### Installation
 
@@ -147,7 +147,7 @@ section: Spacing Utils
 title: u-m--1
 order: 100
 ---
-A utility class to set the margin of
+A utility class to set the margin on all sides of
 an element.
 
 #### Include with:
@@ -161,7 +161,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-m--1'>
-    This element has a 1 rhythm units margin.
+    This element has a 1 rhythm units margin on all sides.
   </div>
 </div>
 ```
@@ -175,7 +175,7 @@ section: Spacing Utils
 title: u-m--2
 order: 101
 ---
-A utility class to set the margin of
+A utility class to set the margin on all sides of
 an element.
 
 #### Include with:
@@ -189,7 +189,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-m--2'>
-    This element has a 2 rhythm units margin.
+    This element has a 2 rhythm units margin on all sides.
   </div>
 </div>
 ```
@@ -203,7 +203,7 @@ section: Spacing Utils
 title: u-m--3
 order: 102
 ---
-A utility class to set the margin of
+A utility class to set the margin on all sides of
 an element.
 
 #### Include with:
@@ -217,7 +217,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-m--3'>
-    This element has a 3 rhythm units margin.
+    This element has a 3 rhythm units margin on all sides.
   </div>
 </div>
 ```
@@ -231,7 +231,7 @@ section: Spacing Utils
 title: u-m--4
 order: 103
 ---
-A utility class to set the margin of
+A utility class to set the margin on all sides of
 an element.
 
 #### Include with:
@@ -245,7 +245,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-m--4'>
-    This element has a 4 rhythm units margin.
+    This element has a 4 rhythm units margin on all sides.
   </div>
 </div>
 ```
@@ -772,7 +772,7 @@ section: Spacing Utils
 title: u-mh--1
 order: 120
 ---
-A utility class to set the horizontal right margins of
+A utility class to set the horizontal (left and right) margins of
 an element.
 
 #### Include with:
@@ -786,7 +786,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-mh--1'>
-    This element has a 1 rhythm units horizontal right margins.
+    This element has a 1 rhythm units horizontal (left and right) margins.
   </div>
 </div>
 ```
@@ -801,7 +801,7 @@ section: Spacing Utils
 title: u-mh--2
 order: 121
 ---
-A utility class to set the horizontal right margins of
+A utility class to set the horizontal (left and right) margins of
 an element.
 
 #### Include with:
@@ -815,7 +815,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-mh--2'>
-    This element has a 2 rhythm units horizontal right margins.
+    This element has a 2 rhythm units horizontal (left and right) margins.
   </div>
 </div>
 ```
@@ -830,7 +830,7 @@ section: Spacing Utils
 title: u-mh--3
 order: 122
 ---
-A utility class to set the horizontal right margins of
+A utility class to set the horizontal (left and right) margins of
 an element.
 
 #### Include with:
@@ -844,7 +844,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-mh--3'>
-    This element has a 3 rhythm units horizontal right margins.
+    This element has a 3 rhythm units horizontal (left and right) margins.
   </div>
 </div>
 ```
@@ -859,7 +859,7 @@ section: Spacing Utils
 title: u-mh--4
 order: 123
 ---
-A utility class to set the horizontal right margins of
+A utility class to set the horizontal (left and right) margins of
 an element.
 
 #### Include with:
@@ -873,7 +873,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-mh--4'>
-    This element has a 4 rhythm units horizontal right margins.
+    This element has a 4 rhythm units horizontal (left and right) margins.
   </div>
 </div>
 ```
@@ -888,7 +888,7 @@ section: Spacing Utils
 title: u-mv--1
 order: 124
 ---
-A utility class to set the vertical bottom margins of
+A utility class to set the vertical (top and bottom) margins of
 an element.
 
 #### Include with:
@@ -902,7 +902,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-mv--1'>
-    This element has a 1 rhythm units vertical bottom margins.
+    This element has a 1 rhythm units vertical (top and bottom) margins.
   </div>
 </div>
 ```
@@ -917,7 +917,7 @@ section: Spacing Utils
 title: u-mv--2
 order: 125
 ---
-A utility class to set the vertical bottom margins of
+A utility class to set the vertical (top and bottom) margins of
 an element.
 
 #### Include with:
@@ -931,7 +931,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-mv--2'>
-    This element has a 2 rhythm units vertical bottom margins.
+    This element has a 2 rhythm units vertical (top and bottom) margins.
   </div>
 </div>
 ```
@@ -946,7 +946,7 @@ section: Spacing Utils
 title: u-mv--3
 order: 126
 ---
-A utility class to set the vertical bottom margins of
+A utility class to set the vertical (top and bottom) margins of
 an element.
 
 #### Include with:
@@ -960,7 +960,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-mv--3'>
-    This element has a 3 rhythm units vertical bottom margins.
+    This element has a 3 rhythm units vertical (top and bottom) margins.
   </div>
 </div>
 ```
@@ -975,7 +975,7 @@ section: Spacing Utils
 title: u-mv--4
 order: 127
 ---
-A utility class to set the vertical bottom margins of
+A utility class to set the vertical (top and bottom) margins of
 an element.
 
 #### Include with:
@@ -989,7 +989,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-mv--4'>
-    This element has a 4 rhythm units vertical bottom margins.
+    This element has a 4 rhythm units vertical (top and bottom) margins.
   </div>
 </div>
 ```
@@ -1852,7 +1852,7 @@ section: Spacing Utils
 title: u-ph--1
 order: 156
 ---
-A utility class to set the horizontal right padding of
+A utility class to set the horizontal (left and right) padding of
 an element.
 
 #### Include with:
@@ -1866,7 +1866,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-ph--1'>
-    This element has a 1 rhythm units horizontal right padding.
+    This element has a 1 rhythm units horizontal (left and right) padding.
   </div>
 </div>
 ```
@@ -1881,7 +1881,7 @@ section: Spacing Utils
 title: u-ph--2
 order: 157
 ---
-A utility class to set the horizontal right padding of
+A utility class to set the horizontal (left and right) padding of
 an element.
 
 #### Include with:
@@ -1895,7 +1895,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-ph--2'>
-    This element has a 2 rhythm units horizontal right padding.
+    This element has a 2 rhythm units horizontal (left and right) padding.
   </div>
 </div>
 ```
@@ -1910,7 +1910,7 @@ section: Spacing Utils
 title: u-ph--3
 order: 158
 ---
-A utility class to set the horizontal right padding of
+A utility class to set the horizontal (left and right) padding of
 an element.
 
 #### Include with:
@@ -1924,7 +1924,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-ph--3'>
-    This element has a 3 rhythm units horizontal right padding.
+    This element has a 3 rhythm units horizontal (left and right) padding.
   </div>
 </div>
 ```
@@ -1939,7 +1939,7 @@ section: Spacing Utils
 title: u-ph--4
 order: 159
 ---
-A utility class to set the horizontal right padding of
+A utility class to set the horizontal (left and right) padding of
 an element.
 
 #### Include with:
@@ -1953,7 +1953,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-ph--4'>
-    This element has a 4 rhythm units horizontal right padding.
+    This element has a 4 rhythm units horizontal (left and right) padding.
   </div>
 </div>
 ```
@@ -1968,7 +1968,7 @@ section: Spacing Utils
 title: u-pv--1
 order: 160
 ---
-A utility class to set the vertical bottom padding of
+A utility class to set the vertical (tiop and bottom) padding of
 an element.
 
 #### Include with:
@@ -1982,7 +1982,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-pv--1'>
-    This element has a 1 rhythm units vertical bottom padding.
+    This element has a 1 rhythm units vertical (tiop and bottom) padding.
   </div>
 </div>
 ```
@@ -1997,7 +1997,7 @@ section: Spacing Utils
 title: u-pv--2
 order: 161
 ---
-A utility class to set the vertical bottom padding of
+A utility class to set the vertical (tiop and bottom) padding of
 an element.
 
 #### Include with:
@@ -2011,7 +2011,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-pv--2'>
-    This element has a 2 rhythm units vertical bottom padding.
+    This element has a 2 rhythm units vertical (tiop and bottom) padding.
   </div>
 </div>
 ```
@@ -2026,7 +2026,7 @@ section: Spacing Utils
 title: u-pv--3
 order: 162
 ---
-A utility class to set the vertical bottom padding of
+A utility class to set the vertical (tiop and bottom) padding of
 an element.
 
 #### Include with:
@@ -2040,7 +2040,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-pv--3'>
-    This element has a 3 rhythm units vertical bottom padding.
+    This element has a 3 rhythm units vertical (tiop and bottom) padding.
   </div>
 </div>
 ```
@@ -2055,7 +2055,7 @@ section: Spacing Utils
 title: u-pv--4
 order: 163
 ---
-A utility class to set the vertical bottom padding of
+A utility class to set the vertical (tiop and bottom) padding of
 an element.
 
 #### Include with:
@@ -2069,7 +2069,7 @@ an element.
 ```example:html
 <div class='fpo--b'>
   <div class='fpo  u-pv--4'>
-    This element has a 4 rhythm units vertical bottom padding.
+    This element has a 4 rhythm units vertical (tiop and bottom) padding.
   </div>
 </div>
 ```
