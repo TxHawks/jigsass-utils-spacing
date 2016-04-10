@@ -35,6 +35,9 @@ typographic rhythm units as defined in
 [$jigsass-sizes](https://txhawks.github.io/jigsass-tools-typography/#variable-jigsass-sizes)
 or a length specified in pixels.
 
+JigSass Spacing supports negative margins, using `min-<number>` modifiers 
+(e.g., `h-mt--min-4`).
+
 #### Installation
 
 Using npm:
