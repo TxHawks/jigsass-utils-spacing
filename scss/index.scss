@@ -70,7 +70,7 @@ conventions.
 Where `<amount>` can be either a unitless number representing a number of
 typographic rhythm units as defined in
 [$jigsass-sizes](https://txhawks.github.io/jigsass-tools-typography/#variable-jigsass-sizes)
-or a length specified in pixels.
+a percentage, or a length specified in pixels.
 
 JigSass Spacing supports negative margins, using `min-<number>` modifiers
 (e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
@@ -264,10 +264,10 @@ $_jigsass-util-spacing-i: 100;
 
     @if(
       not $_auto and
-      (type-of($_modifier) != number or not index(px '', unit($_modifier)))
+      (type-of($_modifier) != number or not index(px '' '%', unit($_modifier)))
     ) {
-      @error 'jigsass-utils-spacing: A length modifier must be a unitless number' +
-        'or a length in pixels. \a' +
+      @error 'jigsass-utils-spacing: A length modifier must be a unitless number,' +
+        'a precentage, or a length in pixels. \a' +
         'You are trying to pass the #{type-of($_modifier)} `#{$jigsass-util-modifier}`.';
     }
 

@@ -32,8 +32,8 @@ conventions.
 
 Where `<amount>` can be either a unitless number representing a number of
 typographic rhythm units as defined in
-[$jigsass-sizes](https://txhawks.github.io/jigsass-tools-typography/#variable-jigsass-sizes)
-or a length specified in pixels.
+[$jigsass-sizes](https://txhawks.github.io/jigsass-tools-typography/#variable-jigsass-sizes),
+a percentage, or a length specified in pixels.
 
 JigSass Spacing supports negative margins, using `min-<number>` modifiers 
 (e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
