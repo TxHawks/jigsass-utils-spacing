@@ -305,14 +305,14 @@ $_jigsass-util-spacing-i: 100;
 
           [dir=ltr] & {
             @include jigsass-rem(
-              #{str-slice($property, 1, -5)}-left,
+              #{str-slice($property, 1, -5)}-right,
               jigsass-rhythm($_modifier, $unit: rem)
             );
           }
 
           [dir=rtl] & {
             @include jigsass-rem(
-              #{str-slice($property, 1, -5)}-right,
+              #{str-slice($property, 1, -5)}-left,
               jigsass-rhythm($_modifier, $unit: rem)
             );
           }
@@ -342,11 +342,11 @@ $_jigsass-util-spacing-i: 100;
           @include jigsass-bidi($property, $_modifier, $rem: false);
 
           [dir=ltr] & {
-            #{str-slice($property, 1, -5)}-left: $_modifier;
+            #{str-slice($property, 1, -5)}-right: $_modifier;
           }
 
           [dir=rtl] & {
-            #{str-slice($property, 1, -5)}-right: $_modifier;
+            #{str-slice($property, 1, -5)}-left: $_modifier;
           }
         }
         @else {
@@ -354,7 +354,6 @@ $_jigsass-util-spacing-i: 100;
         }
       }
     }
-
 
     $_doclet: $jigsass-util-name + ($jigsass-util-modifier or '');
     @if (not index($_doclet-store, $_doclet)) {

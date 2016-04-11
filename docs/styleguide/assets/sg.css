@@ -393,11 +393,11 @@ an element.
 }
 
 [dir=ltr] .u-me--1 {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 [dir=rtl] .u-me--1 {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .u-me--2 {
@@ -429,11 +429,11 @@ an element.
 }
 
 [dir=ltr] .u-me--2 {
-  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 [dir=rtl] .u-me--2 {
-  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .u-me--3 {
@@ -465,11 +465,11 @@ an element.
 }
 
 [dir=ltr] .u-me--3 {
-  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 [dir=rtl] .u-me--3 {
-  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .u-me--4 {
@@ -501,11 +501,11 @@ an element.
 }
 
 [dir=ltr] .u-me--4 {
-  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 [dir=rtl] .u-me--4 {
-  margin-right: 4rem;
+  margin-left: 4rem;
 }
 
 .u-mb--1 {
@@ -1473,11 +1473,11 @@ an element.
 }
 
 [dir=ltr] .u-pe--1 {
-  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 [dir=rtl] .u-pe--1 {
-  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .u-pe--2 {
@@ -1509,11 +1509,11 @@ an element.
 }
 
 [dir=ltr] .u-pe--2 {
-  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 [dir=rtl] .u-pe--2 {
-  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .u-pe--3 {
@@ -1545,11 +1545,11 @@ an element.
 }
 
 [dir=ltr] .u-pe--3 {
-  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 [dir=rtl] .u-pe--3 {
-  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .u-pe--4 {
@@ -1581,11 +1581,11 @@ an element.
 }
 
 [dir=ltr] .u-pe--4 {
-  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 [dir=rtl] .u-pe--4 {
-  padding-right: 4rem;
+  padding-left: 4rem;
 }
 
 .u-pb--1 {
