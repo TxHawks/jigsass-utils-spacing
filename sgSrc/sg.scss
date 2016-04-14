@@ -23,6 +23,7 @@
 @import '../node_modules/jigsass-tools-strings/scss/index';
 @import '../node_modules/jigsass-tools-bidi/scss/index';
 @import '../node_modules/jigsass-tools-selectors/scss/index';
+@import '../node_modules/jigsass-tools-selectors/scss/index';
 
 
 
@@ -39,6 +40,11 @@ $_spacers: u-m u-mt u-me u-mb u-ms u-mh u-mv u-mr u-ml u-p u-pt u-pe u-pb u-ps u
     @include jigsass-util($name, $modifier: $i);
   }
 }
+
+@include jigsass-util(u-as, $modifier: 1);
+@include jigsass-util(u-as, $modifier: 4);
+@include jigsass-util(u-as, $modifier: '2(3up)');
+@include jigsass-util(u-as, $modifier: '4(2up)');
 
 
 @import 'index.scss';
@@ -63,11 +69,30 @@ body {
 .fpo {
    background-color: $jigsass-mdcss-brand-color;
    color: #fff;
-   padding: 1rem;
+   padding: 2rem;
 }
+
 .fpo--b {
   background-color: paleturquoise;
   overflow: hidden;
+}
+
+.fpo--c {
+   padding: .5rem
+}
+
+@for $i from 1 through 12 {
+  .fpo--as#{$i} {
+    margin-left: -2rem;
+    overflow: hidden;
+
+    > * {
+      box-sizing: border-box;
+      float: left;
+      padding-left: 2rem;
+      width: 1 / $i * 100%;
+    }
+  }
 }
 
 figure,

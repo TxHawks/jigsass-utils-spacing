@@ -44,6 +44,24 @@ a percentage, or a length specified in pixels.
 JigSass Spacing supports negative margins, using `min-<number>` modifiers
 (e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
 
+Additionally, JigSass Spacing provide the autospace (`.u-as`) set of helper classes
+for intelligently spacing an element's direct descendants:
+
+
+  - `.u-as--<amount>`
+  - `.u-as--<amount>(<n>up)`
+
+
+`.u-as--<amount>` classes will give all but the first direct descendant of the element carrying the
+class a `margin-top` of `<amount>`.
+
+Similarly, `.u-as--<amount>(<n>up)` classes will give all but the `n` direct descendants of the
+element carrying the class a `margin-top` of `<amount>`, allowing for intelligent spacing of
+grid-like layouts.
+
+For an in-depth presentation of the technique, see
+[this article](http://alistapart.com/article/axiomatic-css-and-lobotomized-owls) by Heydon Pickering.
+
 #### Installation
 
 Using npm:
@@ -140,12 +158,166 @@ class under these  conditions.
 [daviddm-image]: https://david-dm.org/TxHawks/jigsass-utils-spacing.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/TxHawks/jigsass-utils-spacing
 */
+.u-as--1 > * + * {
+  margin-top: 1rem;
+  /* ---
+section: Spacing Utils
+title: u-as--1
+order: 1
+---
+A utility class to intelligently space the direct descendants of an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-as, $modifier: 1 [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b  u-as--1'>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+```
+*/
+}
+
+.u-as--4 > * + * {
+  margin-top: 4rem;
+  /* ---
+section: Spacing Utils
+title: u-as--4
+order: 2
+---
+A utility class to intelligently space the direct descendants of an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-as, $modifier: 4 [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b  u-as--4'>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+```
+*/
+}
+
+.u-as--2\(3up\) > * + * {
+  /* ---
+section: Spacing Utils
+title: u-as--2(3up)
+order: 3
+---
+A utility class to intelligently space the direct descendants of an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-as, $modifier: 2(3up) [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b fpo--as3 u-as--2(3up)'>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+```
+*/
+}
+
+.u-as--2\(3up\) > * + *:nth-child(n+4) {
+  margin-top: 2rem;
+}
+
+.u-as--4\(2up\) > * + * {
+  /* ---
+section: Spacing Utils
+title: u-as--4(2up)
+order: 4
+---
+A utility class to intelligently space the direct descendants of an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-as, $modifier: 4(2up) [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b fpo--as2 u-as--4(2up)'>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+```
+*/
+}
+
+.u-as--4\(2up\) > * + *:nth-child(n+3) {
+  margin-top: 4rem;
+}
+
 .u-m--1 {
   margin: 1rem;
   /* ---
 section: Spacing Utils
 title: u-m--1
-order: 100
+order: 105
 ---
 A utility class to set the margin on all sides of
 an element.
@@ -173,7 +345,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-m--2
-order: 101
+order: 106
 ---
 A utility class to set the margin on all sides of
 an element.
@@ -201,7 +373,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-m--3
-order: 102
+order: 107
 ---
 A utility class to set the margin on all sides of
 an element.
@@ -229,7 +401,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-m--4
-order: 103
+order: 108
 ---
 A utility class to set the margin on all sides of
 an element.
@@ -257,7 +429,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mt--1
-order: 104
+order: 209
 ---
 A utility class to set the top margin of
 an element.
@@ -285,7 +457,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mt--2
-order: 105
+order: 210
 ---
 A utility class to set the top margin of
 an element.
@@ -313,7 +485,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mt--3
-order: 106
+order: 211
 ---
 A utility class to set the top margin of
 an element.
@@ -341,7 +513,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mt--4
-order: 107
+order: 212
 ---
 A utility class to set the top margin of
 an element.
@@ -369,7 +541,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-me--1
-order: 108
+order: 313
 ---
 A utility class to set the margin on the horizontal end of
 an element.
@@ -405,7 +577,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-me--2
-order: 109
+order: 314
 ---
 A utility class to set the margin on the horizontal end of
 an element.
@@ -441,7 +613,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-me--3
-order: 110
+order: 315
 ---
 A utility class to set the margin on the horizontal end of
 an element.
@@ -477,7 +649,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-me--4
-order: 111
+order: 316
 ---
 A utility class to set the margin on the horizontal end of
 an element.
@@ -513,7 +685,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mb--1
-order: 112
+order: 417
 ---
 A utility class to set the bottom margin of
 an element.
@@ -541,7 +713,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mb--2
-order: 113
+order: 418
 ---
 A utility class to set the bottom margin of
 an element.
@@ -569,7 +741,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mb--3
-order: 114
+order: 419
 ---
 A utility class to set the bottom margin of
 an element.
@@ -597,7 +769,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mb--4
-order: 115
+order: 420
 ---
 A utility class to set the bottom margin of
 an element.
@@ -625,7 +797,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ms--1
-order: 116
+order: 521
 ---
 A utility class to set the margin on the horizontal start of
 an element.
@@ -661,7 +833,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ms--2
-order: 117
+order: 522
 ---
 A utility class to set the margin on the horizontal start of
 an element.
@@ -697,7 +869,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ms--3
-order: 118
+order: 523
 ---
 A utility class to set the margin on the horizontal start of
 an element.
@@ -733,7 +905,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ms--4
-order: 119
+order: 524
 ---
 A utility class to set the margin on the horizontal start of
 an element.
@@ -770,7 +942,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mh--1
-order: 120
+order: 625
 ---
 A utility class to set the horizontal (left and right) margins of
 an element.
@@ -799,7 +971,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mh--2
-order: 121
+order: 626
 ---
 A utility class to set the horizontal (left and right) margins of
 an element.
@@ -828,7 +1000,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mh--3
-order: 122
+order: 627
 ---
 A utility class to set the horizontal (left and right) margins of
 an element.
@@ -857,7 +1029,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mh--4
-order: 123
+order: 628
 ---
 A utility class to set the horizontal (left and right) margins of
 an element.
@@ -886,7 +1058,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mv--1
-order: 124
+order: 729
 ---
 A utility class to set the vertical (top and bottom) margins of
 an element.
@@ -915,7 +1087,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mv--2
-order: 125
+order: 730
 ---
 A utility class to set the vertical (top and bottom) margins of
 an element.
@@ -944,7 +1116,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mv--3
-order: 126
+order: 731
 ---
 A utility class to set the vertical (top and bottom) margins of
 an element.
@@ -973,7 +1145,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mv--4
-order: 127
+order: 732
 ---
 A utility class to set the vertical (top and bottom) margins of
 an element.
@@ -1001,7 +1173,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mr--1
-order: 128
+order: 833
 ---
 A utility class to set the right margin of
 an element.
@@ -1029,7 +1201,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mr--2
-order: 129
+order: 834
 ---
 A utility class to set the right margin of
 an element.
@@ -1057,7 +1229,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mr--3
-order: 130
+order: 835
 ---
 A utility class to set the right margin of
 an element.
@@ -1085,7 +1257,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mr--4
-order: 131
+order: 836
 ---
 A utility class to set the right margin of
 an element.
@@ -1113,7 +1285,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ml--1
-order: 132
+order: 937
 ---
 A utility class to set the left margin of
 an element.
@@ -1141,7 +1313,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ml--2
-order: 133
+order: 938
 ---
 A utility class to set the left margin of
 an element.
@@ -1169,7 +1341,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ml--3
-order: 134
+order: 939
 ---
 A utility class to set the left margin of
 an element.
@@ -1197,7 +1369,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ml--4
-order: 135
+order: 940
 ---
 A utility class to set the left margin of
 an element.
@@ -1225,7 +1397,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-p--1
-order: 136
+order: 1041
 ---
 A utility class to set the padding of
 an element.
@@ -1253,7 +1425,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-p--2
-order: 137
+order: 1042
 ---
 A utility class to set the padding of
 an element.
@@ -1281,7 +1453,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-p--3
-order: 138
+order: 1043
 ---
 A utility class to set the padding of
 an element.
@@ -1309,7 +1481,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-p--4
-order: 139
+order: 1044
 ---
 A utility class to set the padding of
 an element.
@@ -1337,7 +1509,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pt--1
-order: 140
+order: 1145
 ---
 A utility class to set the top padding of
 an element.
@@ -1365,7 +1537,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pt--2
-order: 141
+order: 1146
 ---
 A utility class to set the top padding of
 an element.
@@ -1393,7 +1565,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pt--3
-order: 142
+order: 1147
 ---
 A utility class to set the top padding of
 an element.
@@ -1421,7 +1593,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pt--4
-order: 143
+order: 1148
 ---
 A utility class to set the top padding of
 an element.
@@ -1449,7 +1621,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pe--1
-order: 144
+order: 1249
 ---
 A utility class to set the padding on the horizontal end of
 an element.
@@ -1485,7 +1657,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pe--2
-order: 145
+order: 1250
 ---
 A utility class to set the padding on the horizontal end of
 an element.
@@ -1521,7 +1693,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pe--3
-order: 146
+order: 1251
 ---
 A utility class to set the padding on the horizontal end of
 an element.
@@ -1557,7 +1729,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pe--4
-order: 147
+order: 1252
 ---
 A utility class to set the padding on the horizontal end of
 an element.
@@ -1593,7 +1765,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pb--1
-order: 148
+order: 1353
 ---
 A utility class to set the bottom padding of
 an element.
@@ -1621,7 +1793,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pb--2
-order: 149
+order: 1354
 ---
 A utility class to set the bottom padding of
 an element.
@@ -1649,7 +1821,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pb--3
-order: 150
+order: 1355
 ---
 A utility class to set the bottom padding of
 an element.
@@ -1677,7 +1849,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pb--4
-order: 151
+order: 1356
 ---
 A utility class to set the bottom padding of
 an element.
@@ -1705,7 +1877,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ps--1
-order: 152
+order: 1457
 ---
 A utility class to set the padding on the horizontal start of
 an element.
@@ -1741,7 +1913,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ps--2
-order: 153
+order: 1458
 ---
 A utility class to set the padding on the horizontal start of
 an element.
@@ -1777,7 +1949,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ps--3
-order: 154
+order: 1459
 ---
 A utility class to set the padding on the horizontal start of
 an element.
@@ -1813,7 +1985,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ps--4
-order: 155
+order: 1460
 ---
 A utility class to set the padding on the horizontal start of
 an element.
@@ -1850,7 +2022,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ph--1
-order: 156
+order: 1561
 ---
 A utility class to set the horizontal (left and right) padding of
 an element.
@@ -1879,7 +2051,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ph--2
-order: 157
+order: 1562
 ---
 A utility class to set the horizontal (left and right) padding of
 an element.
@@ -1908,7 +2080,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ph--3
-order: 158
+order: 1563
 ---
 A utility class to set the horizontal (left and right) padding of
 an element.
@@ -1937,7 +2109,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ph--4
-order: 159
+order: 1564
 ---
 A utility class to set the horizontal (left and right) padding of
 an element.
@@ -1966,7 +2138,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pv--1
-order: 160
+order: 1665
 ---
 A utility class to set the vertical (tiop and bottom) padding of
 an element.
@@ -1995,7 +2167,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pv--2
-order: 161
+order: 1666
 ---
 A utility class to set the vertical (tiop and bottom) padding of
 an element.
@@ -2024,7 +2196,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pv--3
-order: 162
+order: 1667
 ---
 A utility class to set the vertical (tiop and bottom) padding of
 an element.
@@ -2053,7 +2225,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pv--4
-order: 163
+order: 1668
 ---
 A utility class to set the vertical (tiop and bottom) padding of
 an element.
@@ -2081,7 +2253,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pr--1
-order: 164
+order: 1769
 ---
 A utility class to set the right padding of
 an element.
@@ -2109,7 +2281,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pr--2
-order: 165
+order: 1770
 ---
 A utility class to set the right padding of
 an element.
@@ -2137,7 +2309,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pr--3
-order: 166
+order: 1771
 ---
 A utility class to set the right padding of
 an element.
@@ -2165,7 +2337,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pr--4
-order: 167
+order: 1772
 ---
 A utility class to set the right padding of
 an element.
@@ -2193,7 +2365,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pl--1
-order: 168
+order: 1873
 ---
 A utility class to set the left padding of
 an element.
@@ -2221,7 +2393,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pl--2
-order: 169
+order: 1874
 ---
 A utility class to set the left padding of
 an element.
@@ -2249,7 +2421,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pl--3
-order: 170
+order: 1875
 ---
 A utility class to set the left padding of
 an element.
@@ -2277,7 +2449,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pl--4
-order: 171
+order: 1876
 ---
 A utility class to set the left padding of
 an element.
@@ -2320,12 +2492,160 @@ body {
 .fpo {
   background-color: #09a5d9;
   color: #fff;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .fpo--b {
   background-color: paleturquoise;
   overflow: hidden;
+}
+
+.fpo--c {
+  padding: .5rem;
+}
+
+.fpo--as1 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as1 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 100%;
+}
+
+.fpo--as2 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as2 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 50%;
+}
+
+.fpo--as3 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as3 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 33.3333333333%;
+}
+
+.fpo--as4 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as4 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 25%;
+}
+
+.fpo--as5 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as5 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 20%;
+}
+
+.fpo--as6 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as6 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 16.6666666667%;
+}
+
+.fpo--as7 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as7 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 14.2857142857%;
+}
+
+.fpo--as8 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as8 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 12.5%;
+}
+
+.fpo--as9 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as9 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 11.1111111111%;
+}
+
+.fpo--as10 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as10 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 10%;
+}
+
+.fpo--as11 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as11 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 9.0909090909%;
+}
+
+.fpo--as12 {
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+.fpo--as12 > * {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 2rem;
+  width: 8.3333333333%;
 }
 
 figure,

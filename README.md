@@ -19,6 +19,7 @@ conventions.
   - `.u-mr--<amount>`: margin right
   - `.u-ml--<amount>`: margin left
 
+
   - `.u-p--<amount>`: padding
   - `.u-pt--<amount>`: padding top
   - `.u-pe--<amount>`: padding end (right in `LTR`, left in `RTL`)
@@ -37,6 +38,25 @@ a percentage, or a length specified in pixels.
 
 JigSass Spacing supports negative margins, using `min-<number>` modifiers 
 (e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
+
+Additionally, JigSass Spacing provide the autospace (`.u-as`) set of helper classes 
+for intelligently spacing an element's direct descendants:
+
+
+  - `.u-as--<amount>`
+  - `.u-as--<amount>(<n>up)`
+
+
+`.u-as--<amount>` classes will give all but the first direct descendant of the element carrying the 
+class a `margin-top` of `<amount>`.
+
+Similarly, `.u-as--<amount>(<n>up)` classes will give all but the `n` direct descendants of the 
+element carrying the class a `margin-top` of `<amount>`, allowing for intelligent spacing of 
+grid-like layouts.
+
+For an in-depth presentation of the technique, see 
+[this article](http://alistapart.com/article/axiomatic-css-and-lobotomized-owls) by Heydon Pickering.
+
 
 #### Installation
 

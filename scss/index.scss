@@ -75,6 +75,24 @@ a percentage, or a length specified in pixels.
 JigSass Spacing supports negative margins, using `min-<number>` modifiers
 (e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
 
+Additionally, JigSass Spacing provide the autospace (`.u-as`) set of helper classes
+for intelligently spacing an element's direct descendants:
+
+
+  - `.u-as--<amount>`
+  - `.u-as--<amount>(<n>up)`
+
+
+`.u-as--<amount>` classes will give all but the first direct descendant of the element carrying the
+class a `margin-top` of `<amount>`.
+
+Similarly, `.u-as--<amount>(<n>up)` classes will give all but the `n` direct descendants of the
+element carrying the class a `margin-top` of `<amount>`, allowing for intelligent spacing of
+grid-like layouts.
+
+For an in-depth presentation of the technique, see
+[this article](http://alistapart.com/article/axiomatic-css-and-lobotomized-owls) by Heydon Pickering.
+
 #### Installation
 
 Using npm:
@@ -236,7 +254,27 @@ $_jigsass-spacing-translation: (
 $_doclet-store: () !default;
 
 // Used internally to ordering doclets
-$_jigsass-util-spacing-i: 100;
+$_jigsass-util-spacing-i: 1;
+$_jigsass-util-spacing-addition: (
+  u-m: 100,
+  u-mt: 200,
+  u-me: 300,
+  u-mb: 400,
+  u-ms: 500,
+  u-mh: 600,
+  u-mv: 700,
+  u-mr: 800,
+  u-ml: 900,
+  u-p: 1000,
+  u-pt: 1100,
+  u-pe: 1200,
+  u-pb: 1300,
+  u-ps: 1400,
+  u-ph: 1500,
+  u-pv: 1600,
+  u-pr: 1700,
+  u-pl: 1800,
+);
 
 
 
@@ -244,12 +282,100 @@ $_jigsass-util-spacing-i: 100;
 // Definitions
 // -------------------------------------
 
+// Auto space
+@include jigsass-define-util('u-as') {
+  @if(not $jigsass-util-modifier) {
+    @error 'jigsass-utils-spacing: #{$jigsass-util-name} must be passed a ' +
+      'spacing length as a modifier.';
+  }
+  $modifier: $jigsass-util-modifier;
+  $columns: false;
+
+  @if (type-of($modifier) != number) {
+    $parsed-mod-values: jigsass-parse-modifier($jigsass-util-modifier);
+    $modifier: jigsass-str-to-number(map-get($parsed-mod-values, modifier));
+
+    @if (type-of($modifier) != number) {
+      @error 'jigsass-utils-spacing: #{$jigsass-util-name} must be passed a ' +
+        'spacing length as a modifier. #{$modifier} is a #{type-of($modifier)}';
+    }
+
+    $arg: nth(map-get($parsed-mod-values, args), 1);
+    $columns: jigsass-str-to-number(str-slice($arg, 1, str-length($arg) - 2));
+  }
+
+  > * + * {
+    @if ($columns) {
+      $nth: $columns  + 1;
+
+      &:nth-child(n+#{$nth}) {
+        @if (unitless($modifier)) {
+          @include jigsass-rem(margin-top, jigsass-rhythm($modifier, $unit: rem));
+        }
+        @else {
+          margin-top: $modifier;
+        }
+      }
+    }
+
+    @else if (unitless($modifier)) {
+      @include jigsass-rem(margin-top, jigsass-rhythm($modifier, $unit: rem));
+    }
+    @else {
+      margin-top: $modifier;
+    }
+
+    $_doclet: $jigsass-util-name + ($jigsass-util-modifier or '');
+    @if (not index($_doclet-store, $_doclet)) {
+      $_doclet-store: append($_doclet-store, $_doclet) !global;
+      // stylelint-disable
+/* ---
+section: Spacing Utils
+title: #{$jigsass-util-name}--#{$jigsass-util-modifier}
+order: #{$_jigsass-util-spacing-i}
+---
+A utility class to intelligently space the direct descendants of an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(#{$jigsass-util-name}, $modifier: #{$jigsass-util-modifier} [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b #{if($columns, fpo--as + $columns, '')} #{$jigsass-util-name}--#{$jigsass-util-modifier}'>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  <div><div class='fpo'></div></div>
+  #{if($columns and $columns > 3, "<div><div class='fpo'></div></div>", '')}
+  #{if($columns and $columns > 4, "<div><div class='fpo'></div></div>", '')}
+  #{if($columns and $columns > 5, "<div><div class='fpo'></div></div>", '')}
+  #{if($columns and $columns > 6, "<div><div class='fpo'></div></div>", '')}
+  #{if($columns and $columns > 7, "<div><div class='fpo'></div></div>", '')}
+  #{if($columns and $columns > 8, "<div><div class='fpo'></div></div>", '')}
+  #{if($columns and $columns > 9, "<div><div class='fpo'></div></div>", '')}
+  #{if($columns and $columns > 10, "<div><div class='fpo'></div></div>", '')}
+  #{if($columns and $columns > 11, "<div><div class='fpo'></div></div>", '')}
+</div>
+```
+*/
+      // stylelint-enable
+      $_jigsass-util-spacing-i: $_jigsass-util-spacing-i + 1 !global;
+    }
+  }
+}
+
+
+// Spacing
 @each $direction, $properties in $_jigsass-spacing-directions {
   @include jigsass-define-util($direction) {
     $_type: if(str-slice($jigsass-util-name, 3, 3) == m, margin, padding);
 
     @if(not $jigsass-util-modifier) {
-      @error 'jigsass-utils-spacing: #{$jigsass-util-name} must be passed A ' +
+      @error 'jigsass-utils-spacing: #{$jigsass-util-name} must be passed a ' +
         'spacing length as a modifier.';
     }
 
@@ -271,9 +397,9 @@ $_jigsass-util-spacing-i: 100;
         'You are trying to pass the #{type-of($_modifier)} `#{$jigsass-util-modifier}`.';
     }
 
-    // When length is in rhythm units
     $props: map-get($_jigsass-spacing-directions, $jigsass-util-name);
     @each $property in $props {
+      // When length is in rhythm units
       @if (not $_auto and unitless($_modifier)) {
         @if (str-slice($property, -5) == start) {
           @include jigsass-bidi(
@@ -362,7 +488,7 @@ $_jigsass-util-spacing-i: 100;
 /* ---
 section: Spacing Utils
 title: #{$jigsass-util-name}--#{$jigsass-util-modifier}
-order: #{$_jigsass-util-spacing-i}
+order: #{$_jigsass-util-spacing-i + map-get($_jigsass-util-spacing-addition, $jigsass-util-name)}
 ---
 A utility class to set the #{map-get($_jigsass-spacing-translation, $jigsass-util-name)} of
 an element.
