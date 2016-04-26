@@ -44,18 +44,18 @@ a percentage, or a length specified in pixels.
 JigSass Spacing supports negative margins, using `min-<number>` modifiers
 (e.g., `h-mt--min-4`), as well as auto margins (e.g., `h-m--auto`).
 
-Additionally, JigSass Spacing provide the autospace (`.u-as`) set of helper classes
+Additionally, JigSass Spacing provide the autospace (`.u-autospace`) set of helper classes
 for intelligently spacing an element's direct descendants:
 
 
-  - `.u-as--<amount>`
-  - `.u-as--<amount>(<n>up)`
+  - `.u-autospace--<amount>`
+  - `.u-autospace--<amount>(<n>up)`
 
 
-`.u-as--<amount>` classes will give all but the first direct descendant of the element carrying the
+`.u-autospace--<amount>` classes will give all but the first direct descendant of the element carrying the
 class a `margin-top` of `<amount>`.
 
-Similarly, `.u-as--<amount>(<n>up)` classes will give all but the `n` direct descendants of the
+Similarly, `.u-autospace--<amount>(<n>up)` classes will give all but the `n` direct descendants of the
 element carrying the class a `margin-top` of `<amount>`, allowing for intelligent spacing of
 grid-like layouts.
 
@@ -158,11 +158,11 @@ class under these  conditions.
 [daviddm-image]: https://david-dm.org/TxHawks/jigsass-utils-spacing.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/TxHawks/jigsass-utils-spacing
 */
-.u-as--1 > * + * {
+.u-autospace--1 > * + * {
   margin-top: 1rem;
   /* ---
 section: Spacing Utils
-title: u-as--1
+title: u-autospace--1
 order: 1
 ---
 A utility class to intelligently space the direct descendants of an element.
@@ -170,13 +170,13 @@ A utility class to intelligently space the direct descendants of an element.
 #### Include with:
 
 ```scss
-@include jigsass-util(u-as, $modifier: 1 [, $from, $until, $misc]);
+@include jigsass-util(u-autospace, $modifier: 1 [, $from, $until, $misc]);
 ```
 
 #### Example
 
 ```example:html
-<div class='fpo--b  u-as--1'>
+<div class='fpo--b  u-autospace--1'>
   <div><div class='fpo'></div></div>
   <div><div class='fpo'></div></div>
   <div><div class='fpo'></div></div>
@@ -195,11 +195,11 @@ A utility class to intelligently space the direct descendants of an element.
 */
 }
 
-.u-as--4 > * + * {
+.u-autospace--4 > * + * {
   margin-top: 4rem;
   /* ---
 section: Spacing Utils
-title: u-as--4
+title: u-autospace--4
 order: 2
 ---
 A utility class to intelligently space the direct descendants of an element.
@@ -207,13 +207,13 @@ A utility class to intelligently space the direct descendants of an element.
 #### Include with:
 
 ```scss
-@include jigsass-util(u-as, $modifier: 4 [, $from, $until, $misc]);
+@include jigsass-util(u-autospace, $modifier: 4 [, $from, $until, $misc]);
 ```
 
 #### Example
 
 ```example:html
-<div class='fpo--b  u-as--4'>
+<div class='fpo--b  u-autospace--4'>
   <div><div class='fpo'></div></div>
   <div><div class='fpo'></div></div>
   <div><div class='fpo'></div></div>
@@ -232,10 +232,10 @@ A utility class to intelligently space the direct descendants of an element.
 */
 }
 
-.u-as--2\(3up\) > * + * {
+.u-autospace--2\(3up\) > * + * {
   /* ---
 section: Spacing Utils
-title: u-as--2(3up)
+title: u-autospace--2(3up)
 order: 3
 ---
 A utility class to intelligently space the direct descendants of an element.
@@ -243,13 +243,13 @@ A utility class to intelligently space the direct descendants of an element.
 #### Include with:
 
 ```scss
-@include jigsass-util(u-as, $modifier: 2(3up) [, $from, $until, $misc]);
+@include jigsass-util(u-autospace, $modifier: 2(3up) [, $from, $until, $misc]);
 ```
 
 #### Example
 
 ```example:html
-<div class='fpo--b fpo--as3 u-as--2(3up)'>
+<div class='fpo--b fpo--autospace3 u-autospace--2(3up)'>
   <div><div class='fpo'></div></div>
   <div><div class='fpo'></div></div>
   <div><div class='fpo'></div></div>
@@ -268,14 +268,14 @@ A utility class to intelligently space the direct descendants of an element.
 */
 }
 
-.u-as--2\(3up\) > * + *:nth-child(n+4) {
+.u-autospace--2\(3up\) > * + *:nth-child(n+4) {
   margin-top: 2rem;
 }
 
-.u-as--4\(2up\) > * + * {
+.u-autospace--4\(2up\) > * + * {
   /* ---
 section: Spacing Utils
-title: u-as--4(2up)
+title: u-autospace--4(2up)
 order: 4
 ---
 A utility class to intelligently space the direct descendants of an element.
@@ -283,13 +283,13 @@ A utility class to intelligently space the direct descendants of an element.
 #### Include with:
 
 ```scss
-@include jigsass-util(u-as, $modifier: 4(2up) [, $from, $until, $misc]);
+@include jigsass-util(u-autospace, $modifier: 4(2up) [, $from, $until, $misc]);
 ```
 
 #### Example
 
 ```example:html
-<div class='fpo--b fpo--as2 u-as--4(2up)'>
+<div class='fpo--b fpo--autospace2 u-autospace--4(2up)'>
   <div><div class='fpo'></div></div>
   <div><div class='fpo'></div></div>
   <div><div class='fpo'></div></div>
@@ -308,7 +308,7 @@ A utility class to intelligently space the direct descendants of an element.
 */
 }
 
-.u-as--4\(2up\) > * + *:nth-child(n+3) {
+.u-autospace--4\(2up\) > * + *:nth-child(n+3) {
   margin-top: 4rem;
 }
 
@@ -2504,144 +2504,144 @@ body {
   padding: .5rem;
 }
 
-.fpo--as1 {
+.fpo--autospace1 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as1 > * {
+.fpo--autospace1 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 100%;
 }
 
-.fpo--as2 {
+.fpo--autospace2 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as2 > * {
+.fpo--autospace2 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 50%;
 }
 
-.fpo--as3 {
+.fpo--autospace3 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as3 > * {
+.fpo--autospace3 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 33.3333333333%;
 }
 
-.fpo--as4 {
+.fpo--autospace4 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as4 > * {
+.fpo--autospace4 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 25%;
 }
 
-.fpo--as5 {
+.fpo--autospace5 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as5 > * {
+.fpo--autospace5 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 20%;
 }
 
-.fpo--as6 {
+.fpo--autospace6 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as6 > * {
+.fpo--autospace6 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 16.6666666667%;
 }
 
-.fpo--as7 {
+.fpo--autospace7 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as7 > * {
+.fpo--autospace7 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 14.2857142857%;
 }
 
-.fpo--as8 {
+.fpo--autospace8 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as8 > * {
+.fpo--autospace8 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 12.5%;
 }
 
-.fpo--as9 {
+.fpo--autospace9 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as9 > * {
+.fpo--autospace9 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 11.1111111111%;
 }
 
-.fpo--as10 {
+.fpo--autospace10 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as10 > * {
+.fpo--autospace10 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 10%;
 }
 
-.fpo--as11 {
+.fpo--autospace11 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as11 > * {
+.fpo--autospace11 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;
   width: 9.0909090909%;
 }
 
-.fpo--as12 {
+.fpo--autospace12 {
   margin-left: -2rem;
   overflow: hidden;
 }
 
-.fpo--as12 > * {
+.fpo--autospace12 > * {
   box-sizing: border-box;
   float: left;
   padding-left: 2rem;

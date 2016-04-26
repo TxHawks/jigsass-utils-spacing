@@ -24,22 +24,22 @@
 				</li>
 				
 				<li>
-					<a href="#u-as--1"><span>u-as--1</span></a>
+					<a href="#u-autospace--1"><span>u-autospace--1</span></a>
 					
 				</li>
 				
 				<li>
-					<a href="#u-as--4"><span>u-as--4</span></a>
+					<a href="#u-autospace--4"><span>u-autospace--4</span></a>
 					
 				</li>
 				
 				<li>
-					<a href="#u-as--23up"><span>u-as--2(3up)</span></a>
+					<a href="#u-autospace--23up"><span>u-autospace--2(3up)</span></a>
 					
 				</li>
 				
 				<li>
-					<a href="#u-as--42up"><span>u-as--4(2up)</span></a>
+					<a href="#u-autospace--42up"><span>u-autospace--4(2up)</span></a>
 					
 				</li>
 				
@@ -457,15 +457,15 @@ typographic rhythm units as defined in
 a percentage, or a length specified in pixels.</p>
 <p>JigSass Spacing supports negative margins, using <code>min-&lt;number&gt;</code> modifiers
 (e.g., <code>h-mt--min-4</code>), as well as auto margins (e.g., <code>h-m--auto</code>).</p>
-<p>Additionally, JigSass Spacing provide the autospace (<code>.u-as</code>) set of helper classes
+<p>Additionally, JigSass Spacing provide the autospace (<code>.u-autospace</code>) set of helper classes
 for intelligently spacing an element&#39;s direct descendants:</p>
 <ul>
-<li><code>.u-as--&lt;amount&gt;</code></li>
-<li><code>.u-as--&lt;amount&gt;(&lt;n&gt;up)</code></li>
+<li><code>.u-autospace--&lt;amount&gt;</code></li>
+<li><code>.u-autospace--&lt;amount&gt;(&lt;n&gt;up)</code></li>
 </ul>
-<p><code>.u-as--&lt;amount&gt;</code> classes will give all but the first direct descendant of the element carrying the
+<p><code>.u-autospace--&lt;amount&gt;</code> classes will give all but the first direct descendant of the element carrying the
 class a <code>margin-top</code> of <code>&lt;amount&gt;</code>.</p>
-<p>Similarly, <code>.u-as--&lt;amount&gt;(&lt;n&gt;up)</code> classes will give all but the <code>n</code> direct descendants of the
+<p>Similarly, <code>.u-autospace--&lt;amount&gt;(&lt;n&gt;up)</code> classes will give all but the <code>n</code> direct descendants of the
 element carrying the class a <code>margin-top</code> of <code>&lt;amount&gt;</code>, allowing for intelligent spacing of
 grid-like layouts.</p>
 <p>For an in-depth presentation of the technique, see
@@ -532,15 +532,15 @@ class under these  conditions.</p>
 			</div>
 		</section>
 		
-		<section id="u-as--1">
-			<h3>u-as--1</h3>
+		<section id="u-autospace--1">
+			<h3>u-autospace--1</h3>
 			<div>
 				<p>A utility class to intelligently space the direct descendants of an element.</p>
 <h4 id="include-with-">Include with:</h4>
-<pre><code class="lang-scss">@include jigsass-util(u-as, $modifier: 1 [, $from, $until, $misc]);
+<pre><code class="lang-scss">@include jigsass-util(u-autospace, $modifier: 1 [, $from, $until, $misc]);
 </code></pre>
 <h4 id="example">Example</h4>
-<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b  u-as--1&#39;&gt;
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b  u-autospace--1&#39;&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
@@ -561,15 +561,15 @@ class under these  conditions.</p>
 			</div>
 		</section>
 		
-		<section id="u-as--4">
-			<h3>u-as--4</h3>
+		<section id="u-autospace--4">
+			<h3>u-autospace--4</h3>
 			<div>
 				<p>A utility class to intelligently space the direct descendants of an element.</p>
 <h4 id="include-with-">Include with:</h4>
-<pre><code class="lang-scss">@include jigsass-util(u-as, $modifier: 4 [, $from, $until, $misc]);
+<pre><code class="lang-scss">@include jigsass-util(u-autospace, $modifier: 4 [, $from, $until, $misc]);
 </code></pre>
 <h4 id="example">Example</h4>
-<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b  u-as--4&#39;&gt;
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b  u-autospace--4&#39;&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
@@ -590,15 +590,15 @@ class under these  conditions.</p>
 			</div>
 		</section>
 		
-		<section id="u-as--23up">
-			<h3>u-as--2(3up)</h3>
+		<section id="u-autospace--23up">
+			<h3>u-autospace--2(3up)</h3>
 			<div>
 				<p>A utility class to intelligently space the direct descendants of an element.</p>
 <h4 id="include-with-">Include with:</h4>
-<pre><code class="lang-scss">@include jigsass-util(u-as, $modifier: 2(3up) [, $from, $until, $misc]);
+<pre><code class="lang-scss">@include jigsass-util(u-autospace, $modifier: 2(3up) [, $from, $until, $misc]);
 </code></pre>
 <h4 id="example">Example</h4>
-<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b fpo--as3 u-as--2(3up)&#39;&gt;
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b fpo--autospace3 u-autospace--2(3up)&#39;&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
@@ -619,15 +619,15 @@ class under these  conditions.</p>
 			</div>
 		</section>
 		
-		<section id="u-as--42up">
-			<h3>u-as--4(2up)</h3>
+		<section id="u-autospace--42up">
+			<h3>u-autospace--4(2up)</h3>
 			<div>
 				<p>A utility class to intelligently space the direct descendants of an element.</p>
 <h4 id="include-with-">Include with:</h4>
-<pre><code class="lang-scss">@include jigsass-util(u-as, $modifier: 4(2up) [, $from, $until, $misc]);
+<pre><code class="lang-scss">@include jigsass-util(u-autospace, $modifier: 4(2up) [, $from, $until, $misc]);
 </code></pre>
 <h4 id="example">Example</h4>
-<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b fpo--as2 u-as--4(2up)&#39;&gt;
+<pre><code class="lang-example:html">&lt;div class=&#39;fpo--b fpo--autospace2 u-autospace--4(2up)&#39;&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;div class=&#39;fpo&#39;&gt;&lt;/div&gt;&lt;/div&gt;
@@ -2091,7 +2091,7 @@ an element.</p>
 			</div>
 		</section>
 		
-	<footer>Last modified Friday, 22 April 2016 23:17</footer>
+	<footer>Last modified Tuesday, 26 April 2016 21:13</footer>
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>
