@@ -41,10 +41,10 @@ $_spacers: u-m u-mt u-me u-mb u-ms u-mh u-mv u-mr u-ml u-p u-pt u-pe u-pb u-ps u
   }
 }
 
-@include jigsass-util(u-as, $modifier: 1);
-@include jigsass-util(u-as, $modifier: 4);
-@include jigsass-util(u-as, $modifier: '2(3up)');
-@include jigsass-util(u-as, $modifier: '4(2up)');
+@include jigsass-util(u-autospace, $modifier: 1);
+@include jigsass-util(u-autospace, $modifier: 4);
+@include jigsass-util(u-autospace, $modifier: '2(3up)');
+@include jigsass-util(u-autospace, $modifier: '4(2up)');
 
 
 @import 'index.scss';
@@ -82,7 +82,7 @@ body {
 }
 
 @for $i from 1 through 12 {
-  .fpo--as#{$i} {
+  .fpo--autospace#{$i} {
     margin-left: -2rem;
     overflow: hidden;
 
