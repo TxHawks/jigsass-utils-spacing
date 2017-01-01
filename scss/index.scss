@@ -389,11 +389,11 @@ A utility class to intelligently space the direct descendants of an element.
     );
 
     @if(
-      not $_auto and
-      (type-of($_modifier) != number or not index(px '' '%', unit($_modifier)))
+      (not index(auto none, $_modifier)) and
+      type-of($_modifier) != number
     ) {
-      @error 'jigsass-utils-spacing: A length modifier must be a unitless number,' +
-        'a precentage, or a length in pixels. \a' +
+      @error 'jigsass-utils-spacing: A length modifier must be `auto`, `none`, ' +
+        'a css length or a unitless number. \a' +
         'You are trying to pass the #{type-of($_modifier)} `#{$jigsass-util-modifier}`.';
     }
 
