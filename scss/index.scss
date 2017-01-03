@@ -400,7 +400,7 @@ A utility class to intelligently space the direct descendants of an element.
     $props: map-get($_jigsass-spacing-directions, $jigsass-util-name);
     @each $property in $props {
       // When length is in rhythm units
-      @if (not $_auto and unitless($_modifier)) {
+      @if (not index(auto none, $_modifier) and unitless($_modifier)) {
         @if (str-slice($property, -5) == start) {
           @include jigsass-bidi(
             $property,
@@ -451,8 +451,10 @@ A utility class to intelligently space the direct descendants of an element.
         }
       }
 
-      // When modifier is auto or length is in pixels
+      // When modifier is auto, none or length isn't unitless numbers
       @else {
+        $_modifier: if(type-of($_modifier) == string, unquote($_modifier), $_modifier);
+
         @if (str-slice($property, -5) == start) {
           @include jigsass-bidi($property, $_modifier, $rem: false);
 

@@ -312,12 +312,40 @@ A utility class to intelligently space the direct descendants of an element.
   margin-top: 4rem;
 }
 
+.u-m--auto {
+  margin: auto;
+  /* ---
+section: Spacing Utils
+title: u-m--auto
+order: 105
+---
+A utility class to set the margin on all sides of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-m, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-m--auto'>
+    This element has auto margin on all sides.
+  </div>
+</div>
+```
+*/
+}
+
 .u-m--1 {
   margin: 1rem;
   /* ---
 section: Spacing Utils
 title: u-m--1
-order: 105
+order: 106
 ---
 A utility class to set the margin on all sides of
 an element.
@@ -345,7 +373,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-m--2
-order: 106
+order: 107
 ---
 A utility class to set the margin on all sides of
 an element.
@@ -373,7 +401,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-m--3
-order: 107
+order: 108
 ---
 A utility class to set the margin on all sides of
 an element.
@@ -401,7 +429,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-m--4
-order: 108
+order: 109
 ---
 A utility class to set the margin on all sides of
 an element.
@@ -424,12 +452,40 @@ an element.
 */
 }
 
+.u-mt--auto {
+  margin-top: auto;
+  /* ---
+section: Spacing Utils
+title: u-mt--auto
+order: 210
+---
+A utility class to set the top margin of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-mt, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-mt--auto'>
+    This element has auto top margin.
+  </div>
+</div>
+```
+*/
+}
+
 .u-mt--1 {
   margin-top: 1rem;
   /* ---
 section: Spacing Utils
 title: u-mt--1
-order: 209
+order: 211
 ---
 A utility class to set the top margin of
 an element.
@@ -457,7 +513,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mt--2
-order: 210
+order: 212
 ---
 A utility class to set the top margin of
 an element.
@@ -485,7 +541,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mt--3
-order: 211
+order: 213
 ---
 A utility class to set the top margin of
 an element.
@@ -513,7 +569,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mt--4
-order: 212
+order: 214
 ---
 A utility class to set the top margin of
 an element.
@@ -536,12 +592,48 @@ an element.
 */
 }
 
+.u-me--auto {
+  margin-right: auto;
+  /* ---
+section: Spacing Utils
+title: u-me--auto
+order: 315
+---
+A utility class to set the margin on the horizontal end of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-me, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-me--auto'>
+    This element has auto margin on the horizontal end.
+  </div>
+</div>
+```
+*/
+}
+
+[dir=ltr] .u-me--auto {
+  margin-right: auto;
+}
+
+[dir=rtl] .u-me--auto {
+  margin-left: auto;
+}
+
 .u-me--1 {
   margin-right: 1rem;
   /* ---
 section: Spacing Utils
 title: u-me--1
-order: 313
+order: 316
 ---
 A utility class to set the margin on the horizontal end of
 an element.
@@ -577,7 +669,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-me--2
-order: 314
+order: 317
 ---
 A utility class to set the margin on the horizontal end of
 an element.
@@ -613,7 +705,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-me--3
-order: 315
+order: 318
 ---
 A utility class to set the margin on the horizontal end of
 an element.
@@ -649,7 +741,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-me--4
-order: 316
+order: 319
 ---
 A utility class to set the margin on the horizontal end of
 an element.
@@ -680,12 +772,40 @@ an element.
   margin-left: 4rem;
 }
 
+.u-mb--auto {
+  margin-bottom: auto;
+  /* ---
+section: Spacing Utils
+title: u-mb--auto
+order: 420
+---
+A utility class to set the bottom margin of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-mb, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-mb--auto'>
+    This element has auto bottom margin.
+  </div>
+</div>
+```
+*/
+}
+
 .u-mb--1 {
   margin-bottom: 1rem;
   /* ---
 section: Spacing Utils
 title: u-mb--1
-order: 417
+order: 421
 ---
 A utility class to set the bottom margin of
 an element.
@@ -713,7 +833,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mb--2
-order: 418
+order: 422
 ---
 A utility class to set the bottom margin of
 an element.
@@ -741,7 +861,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mb--3
-order: 419
+order: 423
 ---
 A utility class to set the bottom margin of
 an element.
@@ -769,7 +889,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mb--4
-order: 420
+order: 424
 ---
 A utility class to set the bottom margin of
 an element.
@@ -792,12 +912,48 @@ an element.
 */
 }
 
+.u-ms--auto {
+  margin-left: auto;
+  /* ---
+section: Spacing Utils
+title: u-ms--auto
+order: 525
+---
+A utility class to set the margin on the horizontal start of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-ms, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-ms--auto'>
+    This element has auto margin on the horizontal start.
+  </div>
+</div>
+```
+*/
+}
+
+[dir=ltr] .u-ms--auto {
+  margin-left: auto;
+}
+
+[dir=rtl] .u-ms--auto {
+  margin-right: auto;
+}
+
 .u-ms--1 {
   margin-left: 1rem;
   /* ---
 section: Spacing Utils
 title: u-ms--1
-order: 521
+order: 526
 ---
 A utility class to set the margin on the horizontal start of
 an element.
@@ -833,7 +989,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ms--2
-order: 522
+order: 527
 ---
 A utility class to set the margin on the horizontal start of
 an element.
@@ -869,7 +1025,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ms--3
-order: 523
+order: 528
 ---
 A utility class to set the margin on the horizontal start of
 an element.
@@ -905,7 +1061,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ms--4
-order: 524
+order: 529
 ---
 A utility class to set the margin on the horizontal start of
 an element.
@@ -936,13 +1092,42 @@ an element.
   margin-right: 4rem;
 }
 
+.u-mh--auto {
+  margin-left: auto;
+  margin-right: auto;
+  /* ---
+section: Spacing Utils
+title: u-mh--auto
+order: 630
+---
+A utility class to set the horizontal (left and right) margins of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-mh, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-mh--auto'>
+    This element has auto horizontal (left and right) margins.
+  </div>
+</div>
+```
+*/
+}
+
 .u-mh--1 {
   margin-left: 1rem;
   margin-right: 1rem;
   /* ---
 section: Spacing Utils
 title: u-mh--1
-order: 625
+order: 631
 ---
 A utility class to set the horizontal (left and right) margins of
 an element.
@@ -971,7 +1156,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mh--2
-order: 626
+order: 632
 ---
 A utility class to set the horizontal (left and right) margins of
 an element.
@@ -1000,7 +1185,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mh--3
-order: 627
+order: 633
 ---
 A utility class to set the horizontal (left and right) margins of
 an element.
@@ -1029,7 +1214,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mh--4
-order: 628
+order: 634
 ---
 A utility class to set the horizontal (left and right) margins of
 an element.
@@ -1052,13 +1237,42 @@ an element.
 */
 }
 
+.u-mv--auto {
+  margin-bottom: auto;
+  margin-top: auto;
+  /* ---
+section: Spacing Utils
+title: u-mv--auto
+order: 735
+---
+A utility class to set the vertical (top and bottom) margins of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-mv, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-mv--auto'>
+    This element has auto vertical (top and bottom) margins.
+  </div>
+</div>
+```
+*/
+}
+
 .u-mv--1 {
   margin-bottom: 1rem;
   margin-top: 1rem;
   /* ---
 section: Spacing Utils
 title: u-mv--1
-order: 729
+order: 736
 ---
 A utility class to set the vertical (top and bottom) margins of
 an element.
@@ -1087,7 +1301,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mv--2
-order: 730
+order: 737
 ---
 A utility class to set the vertical (top and bottom) margins of
 an element.
@@ -1116,7 +1330,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mv--3
-order: 731
+order: 738
 ---
 A utility class to set the vertical (top and bottom) margins of
 an element.
@@ -1145,7 +1359,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mv--4
-order: 732
+order: 739
 ---
 A utility class to set the vertical (top and bottom) margins of
 an element.
@@ -1168,12 +1382,40 @@ an element.
 */
 }
 
+.u-mr--auto {
+  margin-right: auto;
+  /* ---
+section: Spacing Utils
+title: u-mr--auto
+order: 840
+---
+A utility class to set the right margin of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-mr, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-mr--auto'>
+    This element has auto right margin.
+  </div>
+</div>
+```
+*/
+}
+
 .u-mr--1 {
   margin-right: 1rem;
   /* ---
 section: Spacing Utils
 title: u-mr--1
-order: 833
+order: 841
 ---
 A utility class to set the right margin of
 an element.
@@ -1201,7 +1443,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mr--2
-order: 834
+order: 842
 ---
 A utility class to set the right margin of
 an element.
@@ -1229,7 +1471,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mr--3
-order: 835
+order: 843
 ---
 A utility class to set the right margin of
 an element.
@@ -1257,7 +1499,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-mr--4
-order: 836
+order: 844
 ---
 A utility class to set the right margin of
 an element.
@@ -1280,12 +1522,40 @@ an element.
 */
 }
 
+.u-ml--auto {
+  margin-left: auto;
+  /* ---
+section: Spacing Utils
+title: u-ml--auto
+order: 945
+---
+A utility class to set the left margin of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-ml, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-ml--auto'>
+    This element has auto left margin.
+  </div>
+</div>
+```
+*/
+}
+
 .u-ml--1 {
   margin-left: 1rem;
   /* ---
 section: Spacing Utils
 title: u-ml--1
-order: 937
+order: 946
 ---
 A utility class to set the left margin of
 an element.
@@ -1313,7 +1583,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ml--2
-order: 938
+order: 947
 ---
 A utility class to set the left margin of
 an element.
@@ -1341,7 +1611,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ml--3
-order: 939
+order: 948
 ---
 A utility class to set the left margin of
 an element.
@@ -1369,7 +1639,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ml--4
-order: 940
+order: 949
 ---
 A utility class to set the left margin of
 an element.
@@ -1392,12 +1662,40 @@ an element.
 */
 }
 
+.u-p--auto {
+  padding: auto;
+  /* ---
+section: Spacing Utils
+title: u-p--auto
+order: 1050
+---
+A utility class to set the padding of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-p, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-p--auto'>
+    This element has auto padding.
+  </div>
+</div>
+```
+*/
+}
+
 .u-p--1 {
   padding: 1rem;
   /* ---
 section: Spacing Utils
 title: u-p--1
-order: 1041
+order: 1051
 ---
 A utility class to set the padding of
 an element.
@@ -1425,7 +1723,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-p--2
-order: 1042
+order: 1052
 ---
 A utility class to set the padding of
 an element.
@@ -1453,7 +1751,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-p--3
-order: 1043
+order: 1053
 ---
 A utility class to set the padding of
 an element.
@@ -1481,7 +1779,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-p--4
-order: 1044
+order: 1054
 ---
 A utility class to set the padding of
 an element.
@@ -1504,12 +1802,40 @@ an element.
 */
 }
 
+.u-pt--auto {
+  padding-top: auto;
+  /* ---
+section: Spacing Utils
+title: u-pt--auto
+order: 1155
+---
+A utility class to set the top padding of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-pt, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-pt--auto'>
+    This element has auto top padding.
+  </div>
+</div>
+```
+*/
+}
+
 .u-pt--1 {
   padding-top: 1rem;
   /* ---
 section: Spacing Utils
 title: u-pt--1
-order: 1145
+order: 1156
 ---
 A utility class to set the top padding of
 an element.
@@ -1537,7 +1863,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pt--2
-order: 1146
+order: 1157
 ---
 A utility class to set the top padding of
 an element.
@@ -1565,7 +1891,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pt--3
-order: 1147
+order: 1158
 ---
 A utility class to set the top padding of
 an element.
@@ -1593,7 +1919,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pt--4
-order: 1148
+order: 1159
 ---
 A utility class to set the top padding of
 an element.
@@ -1616,12 +1942,48 @@ an element.
 */
 }
 
+.u-pe--auto {
+  padding-right: auto;
+  /* ---
+section: Spacing Utils
+title: u-pe--auto
+order: 1260
+---
+A utility class to set the padding on the horizontal end of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-pe, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-pe--auto'>
+    This element has auto padding on the horizontal end.
+  </div>
+</div>
+```
+*/
+}
+
+[dir=ltr] .u-pe--auto {
+  padding-right: auto;
+}
+
+[dir=rtl] .u-pe--auto {
+  padding-left: auto;
+}
+
 .u-pe--1 {
   padding-right: 1rem;
   /* ---
 section: Spacing Utils
 title: u-pe--1
-order: 1249
+order: 1261
 ---
 A utility class to set the padding on the horizontal end of
 an element.
@@ -1657,7 +2019,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pe--2
-order: 1250
+order: 1262
 ---
 A utility class to set the padding on the horizontal end of
 an element.
@@ -1693,7 +2055,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pe--3
-order: 1251
+order: 1263
 ---
 A utility class to set the padding on the horizontal end of
 an element.
@@ -1729,7 +2091,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pe--4
-order: 1252
+order: 1264
 ---
 A utility class to set the padding on the horizontal end of
 an element.
@@ -1760,12 +2122,40 @@ an element.
   padding-left: 4rem;
 }
 
+.u-pb--auto {
+  padding-bottom: auto;
+  /* ---
+section: Spacing Utils
+title: u-pb--auto
+order: 1365
+---
+A utility class to set the bottom padding of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-pb, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-pb--auto'>
+    This element has auto bottom padding.
+  </div>
+</div>
+```
+*/
+}
+
 .u-pb--1 {
   padding-bottom: 1rem;
   /* ---
 section: Spacing Utils
 title: u-pb--1
-order: 1353
+order: 1366
 ---
 A utility class to set the bottom padding of
 an element.
@@ -1793,7 +2183,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pb--2
-order: 1354
+order: 1367
 ---
 A utility class to set the bottom padding of
 an element.
@@ -1821,7 +2211,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pb--3
-order: 1355
+order: 1368
 ---
 A utility class to set the bottom padding of
 an element.
@@ -1849,7 +2239,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pb--4
-order: 1356
+order: 1369
 ---
 A utility class to set the bottom padding of
 an element.
@@ -1872,12 +2262,48 @@ an element.
 */
 }
 
+.u-ps--auto {
+  padding-left: auto;
+  /* ---
+section: Spacing Utils
+title: u-ps--auto
+order: 1470
+---
+A utility class to set the padding on the horizontal start of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-ps, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-ps--auto'>
+    This element has auto padding on the horizontal start.
+  </div>
+</div>
+```
+*/
+}
+
+[dir=ltr] .u-ps--auto {
+  padding-left: auto;
+}
+
+[dir=rtl] .u-ps--auto {
+  padding-right: auto;
+}
+
 .u-ps--1 {
   padding-left: 1rem;
   /* ---
 section: Spacing Utils
 title: u-ps--1
-order: 1457
+order: 1471
 ---
 A utility class to set the padding on the horizontal start of
 an element.
@@ -1913,7 +2339,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ps--2
-order: 1458
+order: 1472
 ---
 A utility class to set the padding on the horizontal start of
 an element.
@@ -1949,7 +2375,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ps--3
-order: 1459
+order: 1473
 ---
 A utility class to set the padding on the horizontal start of
 an element.
@@ -1985,7 +2411,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ps--4
-order: 1460
+order: 1474
 ---
 A utility class to set the padding on the horizontal start of
 an element.
@@ -2016,13 +2442,42 @@ an element.
   padding-right: 4rem;
 }
 
+.u-ph--auto {
+  padding-left: auto;
+  padding-right: auto;
+  /* ---
+section: Spacing Utils
+title: u-ph--auto
+order: 1575
+---
+A utility class to set the horizontal (left and right) padding of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-ph, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-ph--auto'>
+    This element has auto horizontal (left and right) padding.
+  </div>
+</div>
+```
+*/
+}
+
 .u-ph--1 {
   padding-left: 1rem;
   padding-right: 1rem;
   /* ---
 section: Spacing Utils
 title: u-ph--1
-order: 1561
+order: 1576
 ---
 A utility class to set the horizontal (left and right) padding of
 an element.
@@ -2051,7 +2506,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ph--2
-order: 1562
+order: 1577
 ---
 A utility class to set the horizontal (left and right) padding of
 an element.
@@ -2080,7 +2535,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ph--3
-order: 1563
+order: 1578
 ---
 A utility class to set the horizontal (left and right) padding of
 an element.
@@ -2109,7 +2564,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-ph--4
-order: 1564
+order: 1579
 ---
 A utility class to set the horizontal (left and right) padding of
 an element.
@@ -2132,13 +2587,42 @@ an element.
 */
 }
 
+.u-pv--auto {
+  padding-bottom: auto;
+  padding-top: auto;
+  /* ---
+section: Spacing Utils
+title: u-pv--auto
+order: 1680
+---
+A utility class to set the vertical (tiop and bottom) padding of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-pv, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-pv--auto'>
+    This element has auto vertical (tiop and bottom) padding.
+  </div>
+</div>
+```
+*/
+}
+
 .u-pv--1 {
   padding-bottom: 1rem;
   padding-top: 1rem;
   /* ---
 section: Spacing Utils
 title: u-pv--1
-order: 1665
+order: 1681
 ---
 A utility class to set the vertical (tiop and bottom) padding of
 an element.
@@ -2167,7 +2651,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pv--2
-order: 1666
+order: 1682
 ---
 A utility class to set the vertical (tiop and bottom) padding of
 an element.
@@ -2196,7 +2680,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pv--3
-order: 1667
+order: 1683
 ---
 A utility class to set the vertical (tiop and bottom) padding of
 an element.
@@ -2225,7 +2709,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pv--4
-order: 1668
+order: 1684
 ---
 A utility class to set the vertical (tiop and bottom) padding of
 an element.
@@ -2248,12 +2732,40 @@ an element.
 */
 }
 
+.u-pr--auto {
+  padding-right: auto;
+  /* ---
+section: Spacing Utils
+title: u-pr--auto
+order: 1785
+---
+A utility class to set the right padding of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-pr, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-pr--auto'>
+    This element has auto right padding.
+  </div>
+</div>
+```
+*/
+}
+
 .u-pr--1 {
   padding-right: 1rem;
   /* ---
 section: Spacing Utils
 title: u-pr--1
-order: 1769
+order: 1786
 ---
 A utility class to set the right padding of
 an element.
@@ -2281,7 +2793,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pr--2
-order: 1770
+order: 1787
 ---
 A utility class to set the right padding of
 an element.
@@ -2309,7 +2821,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pr--3
-order: 1771
+order: 1788
 ---
 A utility class to set the right padding of
 an element.
@@ -2337,7 +2849,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pr--4
-order: 1772
+order: 1789
 ---
 A utility class to set the right padding of
 an element.
@@ -2360,12 +2872,40 @@ an element.
 */
 }
 
+.u-pl--auto {
+  padding-left: auto;
+  /* ---
+section: Spacing Utils
+title: u-pl--auto
+order: 1890
+---
+A utility class to set the left padding of
+an element.
+
+#### Include with:
+
+```scss
+@include jigsass-util(u-pl, $modifier: auto [, $from, $until, $misc]);
+```
+
+#### Example
+
+```example:html
+<div class='fpo--b'>
+  <div class='fpo  u-pl--auto'>
+    This element has auto left padding.
+  </div>
+</div>
+```
+*/
+}
+
 .u-pl--1 {
   padding-left: 1rem;
   /* ---
 section: Spacing Utils
 title: u-pl--1
-order: 1873
+order: 1891
 ---
 A utility class to set the left padding of
 an element.
@@ -2393,7 +2933,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pl--2
-order: 1874
+order: 1892
 ---
 A utility class to set the left padding of
 an element.
@@ -2421,7 +2961,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pl--3
-order: 1875
+order: 1893
 ---
 A utility class to set the left padding of
 an element.
@@ -2449,7 +2989,7 @@ an element.
   /* ---
 section: Spacing Utils
 title: u-pl--4
-order: 1876
+order: 1894
 ---
 A utility class to set the left padding of
 an element.
